@@ -28,4 +28,16 @@ public class PowerScript : MonoBehaviour
         if (transform.position.z < -20)
             GameObject.Destroy(gameObject);
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.GetComponent<PlayerManager>() != null)
+        {
+            if (this.instrumentNum < 0)
+                other.gameObject.GetComponent<PlayerManager>().Delete();
+            else
+                other.gameObject.GetComponent<PlayerManager>().Collect(instrumentNum);
+
+        }
+    }
 }

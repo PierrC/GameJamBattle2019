@@ -159,10 +159,11 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    public void Delete(int n_instrument)
+    public void Delete()
     {
         if(!invincible)
         {
+            int n_instrument = FindTarget();
             if (instruments[n_instrument] > 0 )
                 instruments[n_instrument] -= 4;
             if (instruments[n_instrument] < 0)
@@ -175,6 +176,21 @@ public class PlayerManager : MonoBehaviour
             StartCoroutine(InvincibleState());
         }
 
+    }
+
+    private int FindTarget()
+    {
+        int minhealth = 15;
+        int target = 0;
+        for (int i = 0; i < instruments.Count; i++)
+        {
+            if (instrumentsMax[i] && instruments[i] < minhealth)
+            {
+                minhealth = instruments[i];
+                target = i;
+            }
+        }
+        return target;
     }
 
     private IEnumerator InvincibleState()

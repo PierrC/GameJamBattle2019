@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "NewPattern", menuName = "Scriptable Object")]
+[SerializeField]
+[CreateAssetMenu(fileName = "NewPattern", menuName = "Scriptable Object/Pattern")]
 public class PatternData : ScriptableObject
 {
     [SerializeField]
-    HashSet<float, List<int>>();
+    public Dictionary<float, List<int>> pattern;
 }

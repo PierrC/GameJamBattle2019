@@ -10,7 +10,7 @@ public class PatternHolder
         {1f, new int [3] {0,2,4}},
         {1.5f, new int [3] {1,3,5}},
         {2f, new int [2] {3,4}},
-        {1.5f, new int [3] {0,3,5}},
+        {2.5f, new int [3] {0,3,5}},
     };
 
 

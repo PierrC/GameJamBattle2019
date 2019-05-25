@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -21,10 +21,20 @@
 			<ShortName>test</ShortName>
 			<Path>test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="3157003241" Name="test" ObjectPath="\Events\Default Work Unit\test" DurationType="OneShot" DurationMin="47.910625" DurationMax="47.910625"/>
+				<Event Id="1702304824" Name="L1" ObjectPath="\Events\Default Work Unit\L1" DurationType="OneShot" DurationMin="47.910625" DurationMax="47.910625"/>
+				<Event Id="1702304827" Name="L2" ObjectPath="\Events\Default Work Unit\L2" DurationType="OneShot" DurationMin="47.910793" DurationMax="47.910793"/>
+				<Event Id="1702304826" Name="L3" ObjectPath="\Events\Default Work Unit\L3" DurationType="OneShot" DurationMin="48.000000" DurationMax="48.000000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="895364062" Language="SFX">
+				<File Id="133583335" Language="SFX">
+					<ShortName>Music_Layer3_Loop.wav</ShortName>
+					<Path>SFX\Music_Layer3_Loop_D79FB2B7.wem</Path>
+				</File>
+				<File Id="470015135" Language="SFX">
+					<ShortName>Music_Layer2_Loop.wav</ShortName>
+					<Path>SFX\Music_Layer2_Loop_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1041687714" Language="SFX">
 					<ShortName>Music_Layer1_Loop.wav</ShortName>
 					<Path>SFX\Music_Layer1_Loop_D79FB2B7.wem</Path>
 				</File>

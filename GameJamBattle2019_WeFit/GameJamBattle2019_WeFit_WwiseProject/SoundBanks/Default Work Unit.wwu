@@ -5,6 +5,8 @@
 			<ChildrenList>
 				<SoundBank Name="test" ID="{420AC805-97DC-4884-B4BE-01E11B055133}">
 					<ObjectInclusionList>
+						<ObjectRef Name="L3" ID="{EB8A9D7C-4E4C-4A15-AF08-18570DC1AD3D}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="L1" ID="{FDDBB169-02C4-4C24-946F-718405A7456D}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="L2" ID="{87718B9B-B11F-4D40-A3C5-E0B08B0D558A}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>

@@ -1,3 +1,24 @@
+State Group	ID	Name			Wwise Object Path	Notes
+	3298531235	Layers			\Default Work Unit\Layers	
+
+State	ID	Name	State Group			Notes
+	0	None	Layers			
+	513591012	Drum_00	Layers			
+	599649464	L1andL2andL4	Layers			
+	599649471	L1andL2andL3	Layers			
+	714328492	L2andL3andL4	Layers			
+	1468994450	L1andL2andL3andL4	Layers			
+	1702304824	L1	Layers			
+	1702304826	L3	Layers			
+	1702304827	L2	Layers			
+	1702304829	L4	Layers			
+	2760178883	L1andL4	Layers			
+	2760178884	L1andL3	Layers			
+	2760178885	L1andL2	Layers			
+	3116499169	L2andL3	Layers			
+	3116499174	L2andL4	Layers			
+	3533580213	L3andL4	Layers			
+
 Audio Bus	ID	Name			Wwise Object Path	Notes
 	3803692087	Master Audio Bus			\Default Work Unit\Master Audio Bus	
 

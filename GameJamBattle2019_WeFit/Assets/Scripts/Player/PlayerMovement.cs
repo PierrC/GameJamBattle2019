@@ -51,7 +51,7 @@ public class PlayerMovement : MonoBehaviour
     {
         while (Vector2.Distance(this.position2D,tube.position2D) > 1)
         {
-            this.GetComponent<Rigidbody2D>().AddForce(tube.position2D - this.position2D);
+            this.GetComponent<Rigidbody>().AddForce(tube.position2D - this.position2D);
             yield return null;
         }
         moving = false;

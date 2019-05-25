@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ObstacleManager : MonoBehaviour
 {
-
+    public GameObject player;
     public TubeGroup tubeGroup;
     public GameObject powerUpPrefab;
 
-    public float speed;
+    public float obstacleSpeed;
 
     // Start is called before the first frame update
     void Start()
@@ -21,12 +21,12 @@ public class ObstacleManager : MonoBehaviour
     void Update()
     {
         ManualInstantiation();
-        
+
     }
 
     private void FixedUpdate()
     {
-        speed += 0.1f * Time.fixedDeltaTime;
+        obstacleSpeed += 0.1f * Time.fixedDeltaTime;
         AutomaticInstantiation();
     }
 
@@ -35,14 +35,18 @@ public class ObstacleManager : MonoBehaviour
     void AutomaticInstantiation()
     {
         timer -= Time.fixedDeltaTime;
-        if(timer < 0 && RandomPowers)
+        if (timer < 0 && RandomPowers)
         {
-            GenerateObstacle(b, Random.Range(0, 3));
-            b = !b;
+            GenerateObstacle(Random.Range(0, 6));
             timer = 1.0f;
         }
     }
-    
+
+    float GetSpawnDistance()
+    {
+        int i = (int)(48 / obstacleSpeed);
+        return obstacleSpeed * 3 + player.transform.position.z;
+    }
 
     void ManualInstantiation()
     {
@@ -52,17 +56,45 @@ public class ObstacleManager : MonoBehaviour
             PatternData p = new PatternData(PatternHolder.example);
             StartCoroutine(PlayPattern(p));
         }
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            PatternData p = new PatternData(PatternHolder.example);
+            StartCoroutine(PlayPatternInverse(p));
+        }
     }
 
-    void GenerateObstacle(bool top, int i)
+    void GenerateObstacles_SphericalSymmetric(int i)
     {
-        GameObject g = Instantiate(powerUpPrefab, tubeGroup.GetTube(top, i).transform.position, new Quaternion());
-        g.GetComponent<PowerScript>().speed = speed;
+        GenerateObstacle(5 - i);
     }
+    void GenerateObstacles_BilateralSymmetric(int i)
+    {
+        switch (i)
+        {
+            case 0:
+                GenerateObstacle(2);
+                break;
+            case 2:
+                GenerateObstacle(1);
+                break;
+            case 3:
+                GenerateObstacle(5);
+                break;
+            case 5:
+                GenerateObstacle(3);
+                break;
+            default:
+                GenerateObstacle(i);
+                break;
+        }
+    }
+
     void GenerateObstacle( int i)
     {
-        GameObject g = Instantiate(powerUpPrefab, tubeGroup.GetTube( i).transform.position, new Quaternion());
-        g.GetComponent<PowerScript>().speed = speed;
+        Vector3 pos = tubeGroup.GetTube(i).transform.position;
+        pos.z = GetSpawnDistance();
+        GameObject g = Instantiate(powerUpPrefab, pos, new Quaternion());
+        g.GetComponent<PowerScript>().speed = obstacleSpeed;
     }
 
     bool RandomPowers;
@@ -83,6 +115,24 @@ public class ObstacleManager : MonoBehaviour
                 GenerateObstacle(i);
             }
         }
-     //   RandomPowers = true;
+        //   RandomPowers = true;
+    }
+    IEnumerator PlayPatternInverse(PatternData pattern)
+    {
+        patternTimer = 0f;
+        RandomPowers = false;
+        foreach (float f in pattern.patterns.Keys)
+        {
+            while (patternTimer < f)
+            {
+                patternTimer += Time.deltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+            foreach (int i in pattern.patterns[f])
+            {
+                GenerateObstacles_SphericalSymmetric(i);
+            }
+        }
+        //   RandomPowers = true;
     }
 }

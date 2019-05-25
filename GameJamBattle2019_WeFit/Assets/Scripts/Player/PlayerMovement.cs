@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 position2D;
     private bool moving;
     private bool resetAxis;
+    public Camera camera;
 
     // Start is called before the first frame update
     void Start()
@@ -95,6 +96,8 @@ public class PlayerMovement : MonoBehaviour
 
 
     }
+
+
 
     public float playerSpeed = 5f;
 

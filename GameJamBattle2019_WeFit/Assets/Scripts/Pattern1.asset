@@ -12,3 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c93cd31a225d9f4d9d1cb6d61f048c8, type: 3}
   m_Name: Pattern1
   m_EditorClassIdentifier: 
+  patterns:
+  - {}
+  - {}

@@ -5,7 +5,8 @@ using UnityEngine;
 public class PowerScript : MonoBehaviour
 {
     public float speed;
-
+    [RangeAttribute(0,5)]
+    public int instrumentNum;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +23,9 @@ public class PowerScript : MonoBehaviour
     Vector3 speedVector;
     void Movement()
     {
-        transform.position -= speedVector * Time.deltaTime; 
+        transform.position -= speedVector * Time.deltaTime;
+
+        if (transform.position.z < -20)
+            GameObject.Destroy(gameObject);
     }
 }

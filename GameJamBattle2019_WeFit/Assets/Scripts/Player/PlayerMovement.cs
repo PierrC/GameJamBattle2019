@@ -58,11 +58,13 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    public float playerSpeed = 5f;
+
     private IEnumerator MovingTo(Tube tube)
     {
         while (Vector2.Distance(this.position2D,tube.position2D) > 0.1f)
         {
-            this.GetComponent<Rigidbody>().AddForce(5*(tube.position2D - this.position2D));
+            this.GetComponent<Rigidbody>().AddForce(playerSpeed * (tube.position2D - this.position2D));
             yield return null;
         }
         this.actualTube = tube;

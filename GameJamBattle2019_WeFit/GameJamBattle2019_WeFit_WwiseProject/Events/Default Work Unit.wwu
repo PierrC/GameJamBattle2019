@@ -1,6 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" SchemaVersion="94">
 	<Events>
-		<WorkUnit Name="Default Work Unit" ID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="test" ID="{87718B9B-B11F-4D40-A3C5-E0B08B0D558A}">
+					<ChildrenList>
+						<Action Name="" ID="{0B70901A-CC95-4F1C-9215-AEC027B1CBD5}" ShortID="815118913">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Music_Layer1_Loop" ID="{E05E9229-F133-4E1E-BB99-8087B7C80BF0}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
 	</Events>
 </WwiseDocument>

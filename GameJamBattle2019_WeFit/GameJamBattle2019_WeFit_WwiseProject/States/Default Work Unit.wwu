@@ -1,6 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{AF6CCAA9-FDEE-4EB0-B1D4-2276FCA16F0A}" SchemaVersion="94">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{AF6CCAA9-FDEE-4EB0-B1D4-2276FCA16F0A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{AF6CCAA9-FDEE-4EB0-B1D4-2276FCA16F0A}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Layers" ID="{7DAA340A-2A8A-4484-A99E-2F5D19309C8F}">
+					<ChildrenList>
+						<State Name="None" ID="{C7EEF397-6C2A-4CB5-BAF0-17FBB18DBCA1}"/>
+						<State Name="Drum_00" ID="{D37A6C83-B4EF-4865-B6D3-B91FFE76DF53}"/>
+						<State Name="L1" ID="{5E4F96D9-0A4A-4014-9444-51A6155BF934}"/>
+						<State Name="L2" ID="{61491EB8-EC4D-4065-8A69-9A8EA8B143F0}"/>
+						<State Name="L3" ID="{9E143CB6-92E9-4B6A-BABC-34645BE7B97B}"/>
+						<State Name="L4" ID="{D3B4ABCA-7B9E-4E47-8C02-AA6847CA7051}"/>
+						<State Name="L1andL2" ID="{2EF2ED11-375A-4265-BAE5-50A6F6EB0C76}"/>
+						<State Name="L1andL3" ID="{E9C53895-364F-402B-B3B4-617EAB0A48C7}"/>
+						<State Name="L1andL4" ID="{A56D3B94-2603-4F0F-8FFB-6314A3EAD7C0}"/>
+						<State Name="L2andL3" ID="{320DA23F-2AA0-4671-85DB-54D985E7DFFD}"/>
+						<State Name="L2andL4" ID="{DA6F8C04-FD83-4231-B3E7-55442CE158E0}"/>
+						<State Name="L3andL4" ID="{411FF89C-F313-4930-AB5C-D5692B1411E9}"/>
+						<State Name="L1andL2andL3" ID="{C649C73A-9C4B-4EF0-B887-937F8C01AC94}"/>
+						<State Name="L1andL2andL4" ID="{2B39642C-F028-4C90-ADC1-BBFD845C15B8}"/>
+						<State Name="L2andL3andL4" ID="{6B265DDD-16DE-434D-B698-6813046876E2}"/>
+						<State Name="L1andL2andL3andL4" ID="{0136F13C-C77B-4C02-B392-7A7400346EAD}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
 	</States>
 </WwiseDocument>

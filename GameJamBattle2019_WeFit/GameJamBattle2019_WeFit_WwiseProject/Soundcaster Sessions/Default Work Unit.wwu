@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{E5776DD0-55C6-47E3-8013-61EF03F36A21}" SchemaVersion="94">
 	<SoundcasterSessions>
-		<WorkUnit Name="Default Work Unit" ID="{E5776DD0-55C6-47E3-8013-61EF03F36A21}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{E5776DD0-55C6-47E3-8013-61EF03F36A21}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="layer test" ID="{2550391D-301F-4B99-8F5D-C22C1EEA266A}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="L1" ID="{FDDBB169-02C4-4C24-946F-718405A7456D}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="L2" ID="{87718B9B-B11F-4D40-A3C5-E0B08B0D558A}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="L3" ID="{EB8A9D7C-4E4C-4A15-AF08-18570DC1AD3D}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="L3" ID="{9E143CB6-92E9-4B6A-BABC-34645BE7B97B}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true"/>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
 	</SoundcasterSessions>
 </WwiseDocument>

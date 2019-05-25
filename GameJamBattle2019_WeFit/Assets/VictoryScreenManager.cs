@@ -1,9 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class Life : MonoBehaviour
+public class VictoryScreenManager : MonoBehaviour
 {
+
 
     // Start is called before the first frame update
     void Start()
@@ -15,5 +17,10 @@ public class Life : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

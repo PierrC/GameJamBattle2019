@@ -26,7 +26,8 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         UpdateLife();
-
+        /*if (Input.GetButton("Jump"))
+            Delete(0);*/
     }
 
     void UpdateLife()

@@ -1,0 +1,32 @@
+fileFormatVersion: 2
+<<<<<<< HEAD:GameJamBattle2019_WeFit/Assets/StreamingAssets/Audio/GeneratedSoundBanks/Wwise_IDs.h.meta
+guid: 425951bbc6c323b4fa23494a9ecf46b9
+PluginImporter:
+=======
+guid: b6c0069bfac43dd41a5ce02028f6801c
+DefaultImporter:
+>>>>>>> master:GameJamBattle2019_WeFit/Assets/Scenes/Controls.unity.meta
+  externalObjects: {}
+  serializedVersion: 2
+  iconMap: {}
+  executionOrder: {}
+  defineConstraints: []
+  isPreloaded: 0
+  isOverridable: 0
+  isExplicitlyReferenced: 0
+  validateReferences: 1
+  platformData:
+  - first:
+      Any: 
+    second:
+      enabled: 1
+      settings: {}
+  - first:
+      Editor: Editor
+    second:
+      enabled: 0
+      settings:
+        DefaultValueInitialized: true
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

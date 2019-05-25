@@ -5,8 +5,9 @@ Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: ehh
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ehh 3
   m_Shader: {fileID: 4800000, guid: 8351d60a7191c8147999224697d5e5ab, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 5
@@ -112,9 +113,9 @@ Material:
     - _Color: {r: 0.5808823, g: 0.77454364, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GroundColor: {r: 0.19607845, g: 0.027450982, b: 0, a: 1}
-    - _SkyColor1: {r: 0.7205882, g: 0.9306288, b: 1, a: 0}
-    - _SkyColor2: {r: 0.41911763, g: 1, b: 1, a: 0}
-    - _SkyColor3: {r: 0.72156864, g: 0.9294118, b: 1, a: 0}
+    - _SkyColor1: {r: 0.15979886, g: 0.16601175, b: 0.1981132, a: 0}
+    - _SkyColor2: {r: 0.21293166, g: 0.22721061, b: 0.31132078, a: 0}
+    - _SkyColor3: {r: 0.1504539, g: 0.16734934, b: 0.21698111, a: 0}
     - _SkyTint: {r: 0.5, g: 0.5, b: 0.5, a: 1}
     - _SunColor: {r: 1, g: 0.99, b: 0.87, a: 1}
     - _SunVector: {r: -0.86, g: -0.1, b: 0, a: 0.42}

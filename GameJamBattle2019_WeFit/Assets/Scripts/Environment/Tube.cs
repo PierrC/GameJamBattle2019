@@ -8,13 +8,12 @@ public class Tube : MonoBehaviour
     public Tube right;
     public Tube opposite;
 
-
-    public Vector2 position2D;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        this.position2D = this.transform.position;
+       // this.position2D = this.transform.position;
     }
 
     // Update is called once per frame

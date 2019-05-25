@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatternHolder
+public static class PatternHolder
 {
-    Dictionary<float, int[]> example = new Dictionary<float, int[]>()
+
+    public static SortedList<float, int[]> example = new SortedList<float, int[]>()
     {
         {0.5f, new int [3] {0,1,5}},
         {1f, new int [3] {0,2,4}},

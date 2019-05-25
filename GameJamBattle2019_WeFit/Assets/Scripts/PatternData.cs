@@ -9,9 +9,9 @@ using UnityEngine;
 public class PatternData
 {
 
-    public Dictionary<float, int[]> patterns;
+    public SortedList<float, int[]> patterns;
     
-    public PatternData(Dictionary<float, int[]> pairs)
+    public PatternData(SortedList<float, int[]> pairs)
     {
         patterns = pairs;
     }

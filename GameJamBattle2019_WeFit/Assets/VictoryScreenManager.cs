@@ -1,22 +1,26 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class testWwise : MonoBehaviour
+public class VictoryScreenManager : MonoBehaviour
 {
-    uint eventWwise;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        eventWwise = AkSoundEngine.PostEvent("Test", this.gameObject);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
-            AkSoundEngine.StopPlayingID(eventWwise);
-             
+        
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 }

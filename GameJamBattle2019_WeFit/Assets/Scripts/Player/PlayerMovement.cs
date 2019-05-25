@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
             if(actualTube.left != null)
             {
                 moving = true;
-                StartCoroutine(MovingTo(actualTube.left));
+                StartCoroutine(MovingTo2(actualTube.left));
             }
         }
         if (direction > 0)
@@ -46,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
             if (actualTube.right != null)
             {
                 moving = true;
-                StartCoroutine(MovingTo(actualTube.right));
+                StartCoroutine(MovingTo2(actualTube.right));
             }
         }
     }
@@ -54,7 +54,7 @@ public class PlayerMovement : MonoBehaviour
     private void MoveVertical()
     {
        moving = true;
-       StartCoroutine(MovingTo(actualTube.opposite));
+       StartCoroutine(MovingTo3(actualTube.opposite));
 
     }
 
@@ -62,14 +62,47 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator MovingTo(Tube tube)
     {
-        while (Vector2.Distance(this.position2D,tube.position2D) > 0.1f)
+        while (Vector2.Distance(this.position2D,tube.transform.position) > 0.2f)
         {
-            this.GetComponent<Rigidbody>().AddForce(playerSpeed * (tube.position2D - this.position2D));
+            this.GetComponent<Rigidbody>().AddForce(playerSpeed * (tube.transform.position - this.transform.position));
             yield return null;
         }
         this.actualTube = tube;
-        this.transform.position = new Vector3(actualTube.position2D.x, actualTube.position2D.y, this.transform.position.z);
+        this.transform.position = new Vector3(actualTube.transform.position.x, actualTube.transform.position.y, this.transform.position.z);
         this.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, this.GetComponent<Rigidbody>().velocity.z);
         moving = false;
     }
+
+    private IEnumerator MovingTo2(Tube tube)
+    {
+        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.1f)
+        {
+            Vector3 vector3 = (tube.transform.position - transform.position);
+            vector3.z = 0;
+            transform.position += vector3.normalized * playerSpeed * Time.fixedDeltaTime;
+            yield return null;
+        }
+        this.actualTube = tube;
+        this.transform.position = new Vector3(actualTube.transform.position.x, actualTube.transform.position.y, this.transform.position.z);
+        yield return new WaitForSeconds(0.02f);
+        moving = false;
+    }
+
+    private IEnumerator MovingTo3(Tube tube)
+    {
+        // play depart sound
+        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.1f)
+        {
+            Vector3 vector3 = (tube.transform.position - transform.position);
+            vector3.z = 0;
+            transform.position += vector3.normalized * playerSpeed * 2 * Time.fixedDeltaTime;
+            yield return null;
+        }
+        this.actualTube = tube;
+        // play arrival sound
+        this.transform.position = new Vector3(actualTube.transform.position.x, actualTube.transform.position.y, this.transform.position.z);
+       //yield return new WaitForSeconds(0.1f);
+        moving = false;
+    }
+
 }

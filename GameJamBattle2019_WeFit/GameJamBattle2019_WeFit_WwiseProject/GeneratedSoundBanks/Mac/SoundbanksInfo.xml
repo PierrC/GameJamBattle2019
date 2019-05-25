@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>

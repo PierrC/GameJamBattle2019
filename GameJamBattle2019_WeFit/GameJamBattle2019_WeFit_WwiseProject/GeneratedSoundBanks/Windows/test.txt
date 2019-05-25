@@ -2,5 +2,5 @@ Event	ID	Name			Wwise Object Path	Notes
 	3157003241	test			\Default Work Unit\test	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	895364062	Music_Layer1_Loop	C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Music_Layer1_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Layer1_Loop\Music_Layer1_Loop		9198904
+	895364062	Music_Layer1_Loop	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Music_Layer1_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Music_Layer1_Loop\Music_Layer1_Loop		9198904
 

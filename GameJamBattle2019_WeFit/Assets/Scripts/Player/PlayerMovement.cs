@@ -25,6 +25,10 @@ public class PlayerMovement : MonoBehaviour
         {
             MoveHorizontal(Input.GetAxis("Horizontal"));
         }
+        if (!moving && Input.GetButtonDown("Jump"))
+        {
+            MoveVertical();
+        }
     }
 
     private void MoveHorizontal(float direction)
@@ -45,6 +49,13 @@ public class PlayerMovement : MonoBehaviour
                 StartCoroutine(MovingTo(actualTube.right));
             }
         }
+    }
+
+    private void MoveVertical()
+    {
+       moving = true;
+       StartCoroutine(MovingTo(actualTube.opposite));
+
     }
 
     private IEnumerator MovingTo(Tube tube)

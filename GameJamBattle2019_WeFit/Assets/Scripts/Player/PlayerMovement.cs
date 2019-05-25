@@ -113,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
     private IEnumerator MovingTo2(Tube tube)
     {
-        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.1f)
+        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.2f)
         {
             Vector3 vector3 = (tube.transform.position - transform.position);
             vector3.z = 0;
@@ -129,7 +129,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator MovingTo3(Tube tube)
     {
         // play depart sound
-        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.1f)
+        while (Vector2.Distance(this.position2D, tube.transform.position) > 0.2f)
         {
             Vector3 vector3 = (tube.transform.position - transform.position);
             vector3.z = 0;

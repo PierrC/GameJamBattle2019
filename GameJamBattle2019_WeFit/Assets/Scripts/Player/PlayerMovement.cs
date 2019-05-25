@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 position2D;
     private bool moving;
+    private bool resetAxis;
 
     // Start is called before the first frame update
     void Start()
@@ -21,14 +23,27 @@ public class PlayerMovement : MonoBehaviour
     {
         this.position2D = this.transform.position;
         this.GetComponent<Rigidbody>().velocity = new Vector3(this.GetComponent<Rigidbody>().velocity.x, this.GetComponent<Rigidbody>().velocity.y, speed);
-        if (!moving && Input.GetAxis("Horizontal") != 0)
+        if (!moving && Input.GetAxisRaw("Horizontal") != 0 && !resetAxis)
         {
-            MoveHorizontal(Input.GetAxis("Horizontal"));
+            MoveHorizontal(Input.GetAxisRaw("Horizontal"));
+            StartCoroutine(WaitForReset());
         }
         if (!moving && Input.GetButtonDown("Jump"))
         {
             MoveVertical();
         }
+        if (!moving && Input.GetAxis("Vertical") != 0)
+        {
+            MoveVertical(Input.GetAxis("Vertical"));
+        }
+    }
+
+    private IEnumerator WaitForReset()
+    {
+        resetAxis = true;
+        while (Mathf.Abs(Input.GetAxisRaw("Horizontal")) >= 0.3f)
+            yield return null;
+        resetAxis = false;
     }
 
     private void MoveHorizontal(float direction)
@@ -55,6 +70,29 @@ public class PlayerMovement : MonoBehaviour
     {
        moving = true;
        StartCoroutine(MovingTo3(actualTube.opposite));
+
+    }
+
+    private void MoveVertical(float direction)
+    {
+
+        if (direction < 0)
+        {
+            if (FindObjectOfType<TubeGroup>().TopTubes.Contains(actualTube))
+            {
+                moving = true;
+                StartCoroutine(MovingTo3(actualTube.opposite));
+            }
+        }
+        if (direction > 0)
+        {
+            if (FindObjectOfType<TubeGroup>().BotTubes.Contains(actualTube))
+            {
+                moving = true;
+                StartCoroutine(MovingTo3(actualTube.opposite));
+            }
+        }
+
 
     }
 

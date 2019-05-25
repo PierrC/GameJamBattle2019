@@ -1,11 +1,20 @@
-﻿using System.Collections;
+﻿
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 
 [CreateAssetMenu(fileName = "NewPattern", menuName = "Scriptable Object/Pattern")]
-public class PatternData : ScriptableObject
+public class PatternData
 {
-    [SerializeField]
-    public Dictionary<float, List<int>> pattern;
+
+    public Dictionary<float, int[]> patterns;
+    
+    public PatternData(Dictionary<float, int[]> pairs)
+    {
+        patterns = pairs;
+    }
 }
+
+

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PowerScript : MonoBehaviour
 {
     public float speed;
-    [RangeAttribute(0,5)]
+    [RangeAttribute(-1,4)]
     public int instrumentNum;
 
     // Start is called before the first frame update

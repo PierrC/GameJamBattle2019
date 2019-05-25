@@ -8,6 +8,7 @@ public class Tube : MonoBehaviour
     public Tube right;
     public Tube opposite;
 
+
     public Vector2 position2D;
 
     // Start is called before the first frame update

@@ -17,6 +17,7 @@ public class ObstacleManager : MonoBehaviour
         downTimeTimer = 0f;
         start = true;
         RandomPowers = true;
+        StartCoroutine(PlayPattern(PatternHolder.startPattern));
     }
 
     bool start;
@@ -75,7 +76,7 @@ public class ObstacleManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            StartCoroutine(PlayPattern(new PatternData(PatternHolder.easy1)));
+            StartCoroutine(PlayPattern(PatternHolder.P_easy1));
         }
     }
 
@@ -223,11 +224,12 @@ public class ObstacleManager : MonoBehaviour
     IEnumerator WaitPattern()
     {
 
-        yield return new WaitForSeconds(Random.Range(5, 16));
+        yield return new WaitForSeconds(Random.Range(5, 11));
         if(Timer.actualTime < 2 * Timer.totalTime / 5)
         {
             StartCoroutine(PlayPattern(
-                PatternHolder.easyPatterns[Random.Range(0, PatternHolder.easyPatterns.Length)]));
+               PatternHolder.easyPatterns[Random.Range(0, PatternHolder.mediumPatterns.Length)])
+                );
 
         }
         else if(Timer.actualTime < 4 * Timer.totalTime / 5)

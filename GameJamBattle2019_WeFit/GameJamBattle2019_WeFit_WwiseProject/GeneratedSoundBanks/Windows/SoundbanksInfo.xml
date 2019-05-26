@@ -21,22 +21,64 @@
 			<ShortName>test</ShortName>
 			<Path>test.bnk</Path>
 			<IncludedEvents>
-				<Event Id="1702304824" Name="L1" ObjectPath="\Events\Default Work Unit\L1" DurationType="OneShot" DurationMin="47.910625" DurationMax="47.910625"/>
-				<Event Id="1702304827" Name="L2" ObjectPath="\Events\Default Work Unit\L2" DurationType="OneShot" DurationMin="47.910793" DurationMax="47.910793"/>
-				<Event Id="1702304826" Name="L3" ObjectPath="\Events\Default Work Unit\L3" DurationType="OneShot" DurationMin="48.000000" DurationMax="48.000000"/>
+				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
-				<File Id="133583335" Language="SFX">
-					<ShortName>Music_Layer3_Loop.wav</ShortName>
-					<Path>SFX\Music_Layer3_Loop_D79FB2B7.wem</Path>
+				<File Id="74210391" Language="SFX">
+					<ShortName>L2L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3_4-4_120bpm_D79FB2B7.wem</Path>
 				</File>
-				<File Id="470015135" Language="SFX">
-					<ShortName>Music_Layer2_Loop.wav</ShortName>
-					<Path>SFX\Music_Layer2_Loop_D79FB2B7.wem</Path>
+				<File Id="77204532" Language="SFX">
+					<ShortName>L1L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3_4-4_120bpm_D79FB2B7.wem</Path>
 				</File>
-				<File Id="1041687714" Language="SFX">
-					<ShortName>Music_Layer1_Loop.wav</ShortName>
-					<Path>SFX\Music_Layer1_Loop_D79FB2B7.wem</Path>
+				<File Id="153738558" Language="SFX">
+					<ShortName>L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="258250584" Language="SFX">
+					<ShortName>Drum_00_4-4_120bpm.wav</ShortName>
+					<Path>SFX\Drum_00_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="400456783" Language="SFX">
+					<ShortName>L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="418713278" Language="SFX">
+					<ShortName>L1L2L3_4-4_120bpm_1.wav</ShortName>
+					<Path>SFX\L1L2L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="447643856" Language="SFX">
+					<ShortName>L1L2L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L1L2L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="451596036" Language="SFX">
+					<ShortName>L1_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="521833825" Language="SFX">
+					<ShortName>L2L4L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L4L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="596764061" Language="SFX">
+					<ShortName>L1L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="686106747" Language="SFX">
+					<ShortName>L1L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="703144362" Language="SFX">
+					<ShortName>L1L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="782216405" Language="SFX">
+					<ShortName>L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="892343327" Language="SFX">
+					<ShortName>L1L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2_4-4_120bpm_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

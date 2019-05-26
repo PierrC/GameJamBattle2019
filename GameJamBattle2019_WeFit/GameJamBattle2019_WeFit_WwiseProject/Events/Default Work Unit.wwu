@@ -3,64 +3,12 @@
 	<Events>
 		<WorkUnit Name="Default Work Unit" ID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" PersistMode="Standalone">
 			<ChildrenList>
-				<Event Name="L2" ID="{87718B9B-B11F-4D40-A3C5-E0B08B0D558A}">
+				<Event Name="Layers" ID="{A01EA0DB-3A9A-439D-8088-02F77B0D588F}">
 					<ChildrenList>
-						<Action Name="" ID="{0B70901A-CC95-4F1C-9215-AEC027B1CBD5}" ShortID="815118913">
+						<Action Name="" ID="{D70FCEF2-B062-4467-9919-777CA02EFE6D}" ShortID="7628643">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer2_Loop" ID="{00EE5E4D-E0C0-417E-A067-EDFAEB5D9B37}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{36EB3551-21AF-4F5D-8F8F-31E0E83097D8}" ShortID="469348289">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer1_Loop" ID="{71E21D32-065B-4B1A-83A7-059BF62FB620}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="L1" ID="{FDDBB169-02C4-4C24-946F-718405A7456D}">
-					<ChildrenList>
-						<Action Name="" ID="{F3834843-5FB9-46FE-8D41-8D362C90D755}" ShortID="877589759">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer1_Loop" ID="{71E21D32-065B-4B1A-83A7-059BF62FB620}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="L3" ID="{EB8A9D7C-4E4C-4A15-AF08-18570DC1AD3D}">
-					<ChildrenList>
-						<Action Name="" ID="{4075D096-6D20-4159-862E-B52A1C758E50}" ShortID="47861790">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer3_Loop" ID="{9CC551C0-554F-454C-8169-BB54D5F0FAF5}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{3AF2B3F1-7BA1-4C15-8223-8CDF05CF8948}" ShortID="937013350">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer2_Loop" ID="{00EE5E4D-E0C0-417E-A067-EDFAEB5D9B37}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-						<Action Name="" ID="{157F70AC-64C3-4AF6-8A73-529F1B2C246C}" ShortID="465791747">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="2"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="Music_Layer1_Loop" ID="{71E21D32-065B-4B1A-83A7-059BF62FB620}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
+									<ObjectRef Name="Layers" ID="{ED898006-4733-4695-8758-685901437311}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

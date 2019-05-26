@@ -13,9 +13,7 @@ namespace AK
 {
     namespace EVENTS
     {
-        static const AkUniqueID L1 = 1702304824U;
-        static const AkUniqueID L2 = 1702304827U;
-        static const AkUniqueID L3 = 1702304826U;
+        static const AkUniqueID LAYERS = 3298531235U;
     } // namespace EVENTS
 
     namespace STATES
@@ -33,6 +31,7 @@ namespace AK
                 static const AkUniqueID L1ANDL2ANDL3ANDL4 = 1468994450U;
                 static const AkUniqueID L1ANDL2ANDL4 = 599649464U;
                 static const AkUniqueID L1ANDL3 = 2760178884U;
+                static const AkUniqueID L1ANDL3ANDL4 = 1332947527U;
                 static const AkUniqueID L1ANDL4 = 2760178883U;
                 static const AkUniqueID L2 = 1702304827U;
                 static const AkUniqueID L2ANDL3 = 3116499169U;

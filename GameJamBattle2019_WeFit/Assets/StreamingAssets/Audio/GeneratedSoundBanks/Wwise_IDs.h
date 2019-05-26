@@ -16,6 +16,8 @@ namespace AK
         static const AkUniqueID HITBALLBAD = 583977384U;
         static const AkUniqueID HITBALLGOOD = 1340843720U;
         static const AkUniqueID LAYERS = 3298531235U;
+        static const AkUniqueID UI_QUIT = 4273572087U;
+        static const AkUniqueID UI_START = 1219048826U;
     } // namespace EVENTS
 
     namespace STATES

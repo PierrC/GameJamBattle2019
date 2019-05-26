@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -24,6 +24,8 @@
 				<Event Id="583977384" Name="HitBallBad" ObjectPath="\Events\Default Work Unit\HitBallBad" DurationType="OneShot" DurationMin="1.017219" DurationMax="1.053092"/>
 				<Event Id="1340843720" Name="HitBallGood" ObjectPath="\Events\Default Work Unit\HitBallGood" DurationType="OneShot" DurationMin="0.522459" DurationMax="0.522459"/>
 				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
+				<Event Id="4273572087" Name="UI_Quit" ObjectPath="\Events\Default Work Unit\UI_Quit" DurationType="OneShot" DurationMin="2.000000" DurationMax="2.000000"/>
+				<Event Id="1219048826" Name="UI_Start" ObjectPath="\Events\Default Work Unit\UI_Start" DurationType="OneShot" DurationMin="2.250000" DurationMax="2.250000"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="80310451" Language="SFX">
@@ -41,6 +43,10 @@
 				<File Id="226717417" Language="SFX">
 					<ShortName>Layer1andLayer2andLayer4.wav</ShortName>
 					<Path>SFX\Layer1andLayer2andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="242489288" Language="SFX">
+					<ShortName>UI_Start_Mix.wav</ShortName>
+					<Path>SFX\UI_Start_Mix_10C4C929.wem</Path>
 				</File>
 				<File Id="245091439" Language="SFX">
 					<ShortName>Layer1andLayer2.wav</ShortName>
@@ -89,6 +95,10 @@
 				<File Id="919894050" Language="SFX">
 					<ShortName>HitBall_Bad.wav</ShortName>
 					<Path>SFX\HitBall_Bad_10C4C929.wem</Path>
+				</File>
+				<File Id="961302918" Language="SFX">
+					<ShortName>UI_Quit_Mix.wav</ShortName>
+					<Path>SFX\UI_Quit_Mix_10C4C929.wem</Path>
 				</File>
 				<File Id="994534677" Language="SFX">
 					<ShortName>Layer2andLayer4.wav</ShortName>

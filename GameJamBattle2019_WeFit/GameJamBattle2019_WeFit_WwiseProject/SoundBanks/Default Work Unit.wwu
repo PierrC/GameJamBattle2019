@@ -6,8 +6,10 @@
 				<SoundBank Name="test" ID="{420AC805-97DC-4884-B4BE-01E11B055133}">
 					<ObjectInclusionList>
 						<ObjectRef Name="Layers" ID="{ED898006-4733-4695-8758-685901437311}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI_Quit" ID="{55B933C5-A331-493F-AC8E-AC9AC1748636}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="HitBallGood" ID="{490BB214-51B6-4EB9-A389-E5D523A0D446}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
 						<ObjectRef Name="HitBallBad" ID="{2309BBF5-A480-4F1E-B7C8-3DD8D6F67F5C}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
+						<ObjectRef Name="UI_Start" ID="{B732EC5F-2167-4FA7-90E4-E9F86FF30BD0}" WorkUnitID="{F964C1B1-1E59-4C5E-8128-7C95CC437AA4}" Filter="7" Origin="Manual"/>
 					</ObjectInclusionList>
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>

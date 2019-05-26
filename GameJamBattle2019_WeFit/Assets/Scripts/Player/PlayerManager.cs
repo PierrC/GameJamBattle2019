@@ -35,7 +35,8 @@ public class PlayerManager : MonoBehaviour
     {
         for (int i = 0; i < instruments.Count; i++)
         {
-            spheres[i].transform.localScale = new Vector3(maxSizeSphere * ((float)instruments[i] / (float)maxLife), maxSizeSphere * ((float)instruments[i] / (float)maxLife), maxSizeSphere * ((float)instruments[i] / (float)maxLife));
+            float size = maxSizeSphere * ((float)instruments[i] / maxLife);
+            spheres[i].transform.localScale = new Vector3(size,size, size);
         }
     }
 

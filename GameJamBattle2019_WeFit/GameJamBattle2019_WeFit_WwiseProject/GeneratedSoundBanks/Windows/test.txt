@@ -1,4 +1,6 @@
 Event	ID	Name			Wwise Object Path	Notes
+	583977384	HitBallBad			\Default Work Unit\HitBallBad	
+	1340843720	HitBallGood			\Default Work Unit\HitBallGood	
 	3298531235	Layers			\Default Work Unit\Layers	
 
 State Group	ID	Name			Wwise Object Path	Notes
@@ -36,8 +38,10 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	528264789	Layer00_Drums	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer00_Drums_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer00_Drums\Layer00_Drums\Layer00_Drums		6144064
 	585101172	Layer1andLayer2andLayer3andLayer4	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer1andLayer2andLayer3andLayer4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer1andLayer2andLayer3andLayer4\Layer1andLayer2andLayer3andLayer4\Layer1andLayer2andLayer3andLayer4		6144064
 	633135797	Layer1andLayer2andLayer3	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer1andLayer2andLayer3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer1andLayer2andLayer3\Layer1andLayer2andLayer3\Layer1andLayer2andLayer3		6144064
+	649626644	HitBallGood	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\HitBall_Good_C6E1B6D6.wem		\Actor-Mixer Hierarchy\Default Work Unit\HitBallGood		103512
 	750048895	Layer3	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer3_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer3\Layer3\Layer3		6144064
 	900307280	Layer3andLayer4	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer3andLayer4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer3andLayer4\Layer3andLayer4\Layer3andLayer4		6144064
+	919894050	HitBallBad	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\HitBall_Bad_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\HitBallBad		198784
 	994534677	Layer2andLayer4	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer2andLayer4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer2andLayer4\Layer2andLayer4\Layer2andLayer4		6144064
 	1058859039	Layer1andLayer4	C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\SFX\Layer1andLayer4_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Layer1andLayer4\Layer1andLayer4\Layer1andLayer4		6144064
 

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="11" SoundbankVersion="134">
+	<RootPaths>
+		<ProjectRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Windows\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Windows\</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Windows</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<StreamedFiles/>
+	<MediaFilesNotInAnyBank/>
+	<SoundBanks>
+		<SoundBank Id="1355168291" Language="SFX">
+			<ObjectPath>Init</ObjectPath>
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+		</SoundBank>
+		<SoundBank Id="3157003241" Language="SFX">
+			<ObjectPath>\SoundBanks\Default Work Unit\test</ObjectPath>
+			<ShortName>test</ShortName>
+			<Path>test.bnk</Path>
+			<IncludedEvents>
+				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
+			</IncludedEvents>
+			<IncludedMemoryFiles>
+				<File Id="74210391" Language="SFX">
+					<ShortName>L2L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="77204532" Language="SFX">
+					<ShortName>L1L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="153738558" Language="SFX">
+					<ShortName>L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="258250584" Language="SFX">
+					<ShortName>Drum_00_4-4_120bpm.wav</ShortName>
+					<Path>SFX\Drum_00_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="400456783" Language="SFX">
+					<ShortName>L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="418713278" Language="SFX">
+					<ShortName>L1L2L3_4-4_120bpm_1.wav</ShortName>
+					<Path>SFX\L1L2L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="447643856" Language="SFX">
+					<ShortName>L1L2L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L1L2L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="451596036" Language="SFX">
+					<ShortName>L1_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="467494596" Language="SFX">
+					<ShortName>L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="521833825" Language="SFX">
+					<ShortName>L2L4L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L4L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="596764061" Language="SFX">
+					<ShortName>L1L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="686106747" Language="SFX">
+					<ShortName>L1L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="703144362" Language="SFX">
+					<ShortName>L1L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="782216405" Language="SFX">
+					<ShortName>L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="892343327" Language="SFX">
+					<ShortName>L1L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1008059073" Language="SFX">
+					<ShortName>L3_4-4_120bpm_1.wav</ShortName>
+					<Path>SFX\L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+				</File>
+			</IncludedMemoryFiles>
+		</SoundBank>
+	</SoundBanks>
+</SoundBanksInfo>

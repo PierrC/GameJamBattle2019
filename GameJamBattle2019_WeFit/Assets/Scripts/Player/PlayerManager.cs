@@ -6,11 +6,14 @@ public class PlayerManager : MonoBehaviour
 {
     public Animator animCamera;
     public Animator animPlayer;
+
     public List<int> instruments;
     public List<GameObject> spheres;
     public int maxLife;
     public float maxSizeSphere;
     int damages;
+
+    public int score;
 
     private bool invincible;
     public List<bool> instrumentsMax;
@@ -18,6 +21,8 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
+        StartCoroutine(CalculateScore());
         damages = (int)(maxLife / 2f);
         instrumentsMax = new List<bool>();
         for(int i = 0; i < instruments.Count; i++)
@@ -26,13 +31,23 @@ public class PlayerManager : MonoBehaviour
         }
         SwitchState();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         UpdateLife();
         /*if (Input.GetButton("Jump"))
             Delete(0);*/
+    }
+
+    int CalculateSCore()
+    {
+        int t = 0;
+        foreach (int i in instruments)
+        {
+            t += i;
+        }
+        return t;
     }
 
     void UpdateLife()
@@ -46,6 +61,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Collect(int n_instrument)
     {
+        AkSoundEngine.PostEvent("HitBallGood", this.gameObject);
         animPlayer.Play("hit", -1, 0f);
         if (instruments[n_instrument] < maxLife)
             instruments[n_instrument]++;
@@ -170,7 +186,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (!invincible)
         {
-
+            AkSoundEngine.PostEvent("HitBallBad", this.gameObject);
             if (CheckLife())
             {
                 int i = Random.Range(0, 4);
@@ -223,6 +239,25 @@ public class PlayerManager : MonoBehaviour
             }
         }
         return target;
+    }
+
+    IEnumerator CalculateScore()
+    {
+
+        yield return new WaitForSeconds(1);
+        int t = 0;
+        foreach (int i in instruments)
+        {
+            t += i;
+        }
+        foreach (bool b in instrumentsMax)
+        {
+            if (b)
+                t += 10;
+        }
+        score += t;
+
+        StartCoroutine(CalculateScore());
     }
 
     private IEnumerator InvincibleState()

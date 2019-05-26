@@ -17,6 +17,7 @@ public class ObstacleManager : MonoBehaviour
         downTimeTimer = 0f;
         start = true;
         RandomPowers = true;
+        harderRand = true;
         StartCoroutine(PlayPattern(PatternHolder.startPattern));
     }
 
@@ -55,14 +56,17 @@ public class ObstacleManager : MonoBehaviour
         }
         else
         {
-            int i1 = Random.Range(0, 6);
-            int i2 = Random.Range(0, 6);
-            while (i2 == i1)
-                i2 = Random.Range(0, 6);
+            if (RandomPowerTimer < 0 && RandomPowers)
+            {
+                int i1 = Random.Range(0, 6);
+                int i2 = Random.Range(0, 6);
+                while (i2 == i1)
+                    i2 = Random.Range(0, 6);
 
-            GenerateObstacle(i1);
-            GenerateObstacle(i2);
-            RandomPowerTimer = 1.0f;
+                GenerateObstacle(i1);
+                GenerateObstacle(i2);
+                RandomPowerTimer = 1.0f;
+            }
         }
     }
 
@@ -94,8 +98,8 @@ public class ObstacleManager : MonoBehaviour
             else
                 spawns[i] += 15;
 
-            spawns[0] += lives[i - 1];
-            spawns[i] += (player.GetComponent<PlayerManager>().maxLife - lives[i - 1]) / player.GetComponent<PlayerManager>().maxLife * 10;
+            spawns[0] += lives[i - 1] * 10/ player.GetComponent<PlayerManager>().maxLife ;
+            spawns[i] +=( (player.GetComponent<PlayerManager>().maxLife - lives[i - 1]) * 10 / player.GetComponent<PlayerManager>().maxLife);
         }
 
         int total = 0;
@@ -104,9 +108,11 @@ public class ObstacleManager : MonoBehaviour
             total += spawns[i];
             if (r < total)
             {
+                Debug.Log("Spawns[0]:" + spawns[0] + " Spawns[1]:" + spawns[1] + " Spawns[2]:" + spawns[2] + " Spawns[3]:" + spawns[3] + " Spawns[4]:" + spawns[4]);
                 return i - 1;
             }
         }
+        Debug.Log("Spawns[0]:" + spawns[0] + " Spawns[1]:" + spawns[1] + " Spawns[2]:" + spawns[2] + " Spawns[3]:" + spawns[3] + " Spawns[4]:" + spawns[4]);
         return -1;
     }
 

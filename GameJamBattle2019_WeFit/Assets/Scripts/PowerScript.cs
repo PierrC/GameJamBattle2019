@@ -7,11 +7,18 @@ public class PowerScript : MonoBehaviour
     public float speed;
     [RangeAttribute(-1,4)]
     public int instrumentNum;
-
+    public GameObject[] materials;
     // Start is called before the first frame update
     void Start()
     {
         speedVector = new Vector3(0, 0, speed);
+        for(int i = 0; i < materials.Length; i++)
+        {
+            if (i == instrumentNum+1)
+                materials[i].SetActive(true);
+            else
+                materials[i].SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -31,6 +38,7 @@ public class PowerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.GetComponent<PlayerManager>() != null)
         {
             if (this.instrumentNum < 0)
@@ -39,5 +47,6 @@ public class PowerScript : MonoBehaviour
                 other.gameObject.GetComponent<PlayerManager>().Collect(instrumentNum);
 
         }
+        GameObject.Destroy(gameObject);
     }
 }

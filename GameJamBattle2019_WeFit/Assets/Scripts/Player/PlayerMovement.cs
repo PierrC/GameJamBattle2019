@@ -125,7 +125,7 @@ public class PlayerMovement : MonoBehaviour
         }
         this.actualTube = tube;
         this.transform.position = new Vector3(actualTube.transform.position.x, actualTube.transform.position.y, this.transform.position.z);
-        yield return new WaitForSeconds(0.02f);
+        yield return new WaitForSeconds(0.01f);
         moving = false;
     }
 
@@ -136,7 +136,7 @@ public class PlayerMovement : MonoBehaviour
         {
             Vector3 vector3 = (tube.transform.position - transform.position);
             vector3.z = 0;
-            transform.position += vector3.normalized * playerSpeed * 2 * Time.fixedDeltaTime;
+            transform.position += vector3.normalized * playerSpeed * 1.6f * Time.fixedDeltaTime;
             yield return null;
         }
         this.actualTube = tube;

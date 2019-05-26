@@ -84,7 +84,7 @@ Material:
     - _ParticlesRadius: 8
     - _ParticlesSpeed: 4.58
     - _SecondaryColorAngle: 1
-    - _SecondaryColorImpact: 1.53
+    - _SecondaryColorImpact: 1.62
     - _Speed1: 3
     - _Speed2: 5
     - _SpeedH1: 3.34
@@ -97,8 +97,8 @@ Material:
     m_Colors:
     - _Color: {r: 0.90344834, g: 1, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _PrimaryColor: {r: 0, g: 1, b: 0.88916373, a: 1}
+    - _PrimaryColor: {r: 0, g: 0, b: 0, a: 1}
     - _RimColor: {r: 1, g: 0.6827586, b: 0, a: 1}
-    - _SecondaryColor: {r: 0, g: 0.15327406, b: 1, a: 1}
+    - _SecondaryColor: {r: 0, g: 0.39143825, b: 1, a: 1}
     - _primaryColor: {r: 1, g: 1, b: 0, a: 1}
     - _secondaryColor: {r: 1, g: 0, b: 0, a: 1}

@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public Animator animCamera;
+    public Animator animPlayer;
     public List<int> instruments;
     public List<GameObject> spheres;
     public int maxLife;
     public float maxSizeSphere;
+    int damages;
 
     private bool invincible;
     public List<bool> instrumentsMax;
@@ -15,11 +18,13 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damages = (int)(maxLife / 2f);
         instrumentsMax = new List<bool>();
         for(int i = 0; i < instruments.Count; i++)
         {
             instrumentsMax.Add(false);
         }
+        SwitchState();
     }
 
     // Update is called once per frame
@@ -34,12 +39,14 @@ public class PlayerManager : MonoBehaviour
     {
         for (int i = 0; i < instruments.Count; i++)
         {
-            spheres[i].transform.localScale = new Vector3(maxSizeSphere * ((float)instruments[i] / (float)maxLife), maxSizeSphere * ((float)instruments[i] / (float)maxLife), maxSizeSphere * ((float)instruments[i] / (float)maxLife));
+            float size = maxSizeSphere * ((float)instruments[i] / maxLife);
+            spheres[i].transform.localScale = new Vector3(size,size, size);
         }
     }
 
     public void Collect(int n_instrument)
     {
+        animPlayer.Play("hit", -1, 0f);
         if (instruments[n_instrument] < maxLife)
             instruments[n_instrument]++;
         if (instruments[n_instrument] == maxLife && !instrumentsMax[n_instrument])
@@ -161,21 +168,46 @@ public class PlayerManager : MonoBehaviour
 
     public void Delete()
     {
-        if(!invincible)
+        if (!invincible)
         {
-            int n_instrument = FindTarget();
-            if (instruments[n_instrument] > 0 )
-                instruments[n_instrument] -= 4;
-            if (instruments[n_instrument] < 0)
-                instruments[n_instrument] = 0;
-            if(instruments[n_instrument] <= 0)
-            {
-                instrumentsMax[n_instrument] = false;
-                SwitchState();
-            }
-            StartCoroutine(InvincibleState());
-        }
 
+            if (CheckLife())
+            {
+                int i = Random.Range(0, 4);
+                int counter = 0;
+                while (instruments[i] == 0)
+                {
+                    counter++;
+                    i = Random.Range(0, 4);
+                    if (counter >= 5)
+                        break;
+                }
+                if (counter < 5)
+                {
+                    instruments[i] -= damages;
+
+                }
+                if (instruments[i] <= 0)
+                {
+                    instruments[i] = 0;
+                    instrumentsMax[i] = false;
+                    SwitchState();
+                }
+                // felix
+                animCamera.Play("ScreenShake", -1, 0f);
+                StartCoroutine(InvincibleState());
+            }
+        }
+    }
+
+    private bool CheckLife()
+    {
+        foreach (int i in instruments)
+        {
+            if (i != 0)
+                return true;
+        }
+        return false;
     }
 
     private int FindTarget()
@@ -204,11 +236,15 @@ public class PlayerManager : MonoBehaviour
             {
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = false;
+                //felix
+                RenderSettings.fogDensity = 0.031f;
             }
             else
             {
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = true;
+                //felix
+                RenderSettings.fogDensity = 0.03f;
             }
             yield return null;
 
@@ -216,5 +252,7 @@ public class PlayerManager : MonoBehaviour
         foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
             mesh.enabled = true;
         invincible = false;
+        //felix
+        RenderSettings.fogDensity = 0.03f;
     }
 }

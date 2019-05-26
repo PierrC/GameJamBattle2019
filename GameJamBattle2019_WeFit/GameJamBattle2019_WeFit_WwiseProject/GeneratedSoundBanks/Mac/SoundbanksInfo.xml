@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <SoundBanksInfo Platform="Mac" BasePlatform="Mac" SchemaVersion="11" SoundbankVersion="134">
 	<RootPaths>
-		<ProjectRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
-		<SourceFilesRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
-		<SoundBanksRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
+		<ProjectRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\</ProjectRoot>
+		<SourceFilesRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\</SourceFilesRoot>
+		<SoundBanksRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac\</SoundBanksRoot>
 		<ExternalSourcesInputFile></ExternalSourcesInputFile>
-		<ExternalSourcesOutputRoot>C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
+		<ExternalSourcesOutputRoot>C:\Users\Hugo\Documents\my games\Unity\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\GeneratedSoundBanks\Mac</ExternalSourcesOutputRoot>
 	</RootPaths>
 	<DialogueEvents/>
 	<StreamedFiles/>
@@ -24,6 +24,7 @@
 				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+<<<<<<< HEAD
 				<File Id="80310451" Language="SFX">
 					<ShortName>Layer2.wav</ShortName>
 					<Path>SFX\Layer2_D79FB2B7.wem</Path>
@@ -87,6 +88,71 @@
 				<File Id="1058859039" Language="SFX">
 					<ShortName>Layer1andLayer4.wav</ShortName>
 					<Path>SFX\Layer1andLayer4_D79FB2B7.wem</Path>
+=======
+				<File Id="74210391" Language="SFX">
+					<ShortName>L2L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="77204532" Language="SFX">
+					<ShortName>L1L3_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="153738558" Language="SFX">
+					<ShortName>L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="258250584" Language="SFX">
+					<ShortName>Drum_00_4-4_120bpm.wav</ShortName>
+					<Path>SFX\Drum_00_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="400456783" Language="SFX">
+					<ShortName>L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="418713278" Language="SFX">
+					<ShortName>L1L2L3_4-4_120bpm_1.wav</ShortName>
+					<Path>SFX\L1L2L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="447643856" Language="SFX">
+					<ShortName>L1L2L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L1L2L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="451596036" Language="SFX">
+					<ShortName>L1_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="467494596" Language="SFX">
+					<ShortName>L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="521833825" Language="SFX">
+					<ShortName>L2L4L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L2L4L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="596764061" Language="SFX">
+					<ShortName>L1L2L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="686106747" Language="SFX">
+					<ShortName>L1L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="703144362" Language="SFX">
+					<ShortName>L1L3L4_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L3L4_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="782216405" Language="SFX">
+					<ShortName>L4_4-4_120bpm_2.wav</ShortName>
+					<Path>SFX\L4_4-4_120bpm_2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="892343327" Language="SFX">
+					<ShortName>L1L2_4-4_120bpm.wav</ShortName>
+					<Path>SFX\L1L2_4-4_120bpm_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1008059073" Language="SFX">
+					<ShortName>L3_4-4_120bpm_1.wav</ShortName>
+					<Path>SFX\L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+>>>>>>> fa4704810fd5023d5e377fc5dae48deff3aeaeda
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

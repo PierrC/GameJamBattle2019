@@ -38,6 +38,7 @@ public class PowerScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+
         if (other.gameObject.GetComponent<PlayerManager>() != null)
         {
             if (this.instrumentNum < 0)

@@ -8,6 +8,7 @@ public class PlayerManager : MonoBehaviour
     public List<GameObject> spheres;
     public int maxLife;
     public float maxSizeSphere;
+    public Animator anim;
 
     private bool invincible;
     public List<bool> instrumentsMax;
@@ -174,6 +175,10 @@ public class PlayerManager : MonoBehaviour
                 instrumentsMax[n_instrument] = false;
                 SwitchState();
             }
+            // felix
+            Debug.Log("ScrenShake");
+            anim.Play("ScreenShake", -1, 0f);
+
             StartCoroutine(InvincibleState());
         }
 
@@ -196,6 +201,9 @@ public class PlayerManager : MonoBehaviour
 
     private IEnumerator InvincibleState()
     {
+
+
+
         invincible = true;
         float timer = 0;
         while(timer < 1f)

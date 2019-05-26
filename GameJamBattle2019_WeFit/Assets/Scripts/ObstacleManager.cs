@@ -68,12 +68,12 @@ public class ObstacleManager : MonoBehaviour
         for(int i = 1; i <= lives.Count; i++)
         {
             if (bools[i-1])
-                spawns[0] += 5;
+                spawns[0] += 15;
             else
-                spawns[i] += 5;
+                spawns[i] += 15;
 
-            spawns[0] += lives[i-1] * 2;
-            spawns[i] = (10 - lives[i-1]) * 2;
+            spawns[0] += lives[i-1];
+            spawns[i] += (10 - lives[i-1]);
         }
 
         int total = 0;
@@ -82,9 +82,15 @@ public class ObstacleManager : MonoBehaviour
             total += spawns[i];
             if(r < total)
             {
+                if(i == 0)
+                    Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
+                        + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
                 return i - 1;
             }
         }
+        Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
+            + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
+
         return -1;
     }
 

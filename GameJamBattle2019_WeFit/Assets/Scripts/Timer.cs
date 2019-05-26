@@ -9,11 +9,15 @@ public class Timer : MonoBehaviour
     public float totalTime;
     public Image image;
     public float actualTime;
+    public PlayerManager player;
+
+    private bool done;
 
     // Start is called before the first frame update
     void Start()
     {
         actualTime = 0;
+        player = FindObjectOfType<PlayerManager>();
     }
 
 
@@ -22,9 +26,11 @@ public class Timer : MonoBehaviour
     void Update()
     {
         actualTime += Time.deltaTime;
-        if(actualTime > totalTime)
+        if(actualTime > (totalTime-1) && !done)
         {
             StartCoroutine(WaitAndFade());
+            player.animPlayer.Play("endPlayer");
+            done = true;
         }
     }
 
@@ -32,10 +38,10 @@ public class Timer : MonoBehaviour
     {
         float timer = 0f;
         Color c = new Color(0, 0, 0, 0);
-        while(timer < 1)
+        while(timer < 2f)
         {
             timer += Time.deltaTime;
-            c.a = timer;
+            c.a = timer/2;
             image.color = c;
             yield return null;
         }

@@ -13,6 +13,8 @@ namespace AK
 {
     namespace EVENTS
     {
+        static const AkUniqueID HITBALLBAD = 583977384U;
+        static const AkUniqueID HITBALLGOOD = 1340843720U;
         static const AkUniqueID LAYERS = 3298531235U;
     } // namespace EVENTS
 
@@ -54,8 +56,6 @@ namespace AK
     namespace BUSSES
     {
         static const AkUniqueID MASTER_AUDIO_BUS = 3803692087U;
-        static const AkUniqueID MUSIC = 3991942870U;
-        static const AkUniqueID SFX = 393239870U;
     } // namespace BUSSES
 
     namespace AUDIO_DEVICES

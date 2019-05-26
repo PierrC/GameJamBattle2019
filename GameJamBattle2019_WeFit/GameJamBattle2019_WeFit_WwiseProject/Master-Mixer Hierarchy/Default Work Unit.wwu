@@ -9,22 +9,6 @@
 							<ObjectRef Name="System" ID="{24A27584-CB73-4666-B20F-D7025C87D782}" WorkUnitID="{F888BF91-B8B1-45A9-A44E-A5B65891DDE5}"/>
 						</Reference>
 					</ReferenceList>
-					<ChildrenList>
-						<Bus Name="Music" ID="{973C041C-792A-4535-8016-78D0549B9A04}"/>
-						<Bus Name="SFX" ID="{F5F2A0EB-B488-4B0E-9622-2FB4050673AF}">
-							<DuckingList>
-								<DuckItem>
-									<BusRef Name="Music" ID="{973C041C-792A-4535-8016-78D0549B9A04}"/>
-									<DuckingParam>
-										<Volume>-6</Volume>
-										<FadeInTime>1</FadeInTime>
-										<FadeOutTime>0</FadeOutTime>
-										<FadeCurve>FadeLinear</FadeCurve>
-									</DuckingParam>
-								</DuckItem>
-							</DuckingList>
-						</Bus>
-					</ChildrenList>
 				</Bus>
 			</ChildrenList>
 		</WorkUnit>

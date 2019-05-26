@@ -21,6 +21,8 @@
 			<ShortName>test</ShortName>
 			<Path>test.bnk</Path>
 			<IncludedEvents>
+				<Event Id="583977384" Name="HitBallBad" ObjectPath="\Events\Default Work Unit\HitBallBad" DurationType="OneShot" DurationMin="1.017219" DurationMax="1.053092"/>
+				<Event Id="1340843720" Name="HitBallGood" ObjectPath="\Events\Default Work Unit\HitBallGood" DurationType="OneShot" DurationMin="0.522459" DurationMax="0.522459"/>
 				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -72,6 +74,10 @@
 					<ShortName>Layer1andLayer2andLayer3.wav</ShortName>
 					<Path>SFX\Layer1andLayer2andLayer3_D79FB2B7.wem</Path>
 				</File>
+				<File Id="649626644" Language="SFX">
+					<ShortName>HitBall_Good.wav</ShortName>
+					<Path>SFX\HitBall_Good_C6E1B6D6.wem</Path>
+				</File>
 				<File Id="750048895" Language="SFX">
 					<ShortName>Layer3.wav</ShortName>
 					<Path>SFX\Layer3_D79FB2B7.wem</Path>
@@ -79,6 +85,10 @@
 				<File Id="900307280" Language="SFX">
 					<ShortName>Layer3andLayer4.wav</ShortName>
 					<Path>SFX\Layer3andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="919894050" Language="SFX">
+					<ShortName>HitBall_Bad.wav</ShortName>
+					<Path>SFX\HitBall_Bad_10C4C929.wem</Path>
 				</File>
 				<File Id="994534677" Language="SFX">
 					<ShortName>Layer2andLayer4.wav</ShortName>

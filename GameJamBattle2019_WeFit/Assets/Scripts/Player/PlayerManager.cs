@@ -61,7 +61,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Collect(int n_instrument)
     {
-
+        AkSoundEngine.PostEvent("HitBallGood", this.gameObject);
         animPlayer.Play("hit", -1, 0f);
         if (instruments[n_instrument] < maxLife)
             instruments[n_instrument]++;
@@ -186,7 +186,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (!invincible)
         {
-
+            AkSoundEngine.PostEvent("HitBallBad", this.gameObject);
             if (CheckLife())
             {
                 int i = Random.Range(0, 4);

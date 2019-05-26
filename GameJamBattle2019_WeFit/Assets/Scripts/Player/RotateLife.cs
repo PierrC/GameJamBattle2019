@@ -24,11 +24,20 @@ public class RotateLife : MonoBehaviour
     void Update()
     {
         // this.gameObject.transform.rotation = Quaternion.Euler(0, 0, this.gameObject.transform.rotation.eulerAngles.z + (rotateSpeed*Time.deltaTime));
-       // this.gameObject.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime));
+        // this.gameObject.transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime));
 
-        for(int i = 0; i < spheres.Length; i++)
+        for (int i = 0; i < spheres.Length; i++)
         {
-            spheres[i].transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime * maxSizeSphere * (manager.instruments[i] / maxLife)));
+            if (manager.instruments[i] == maxLife)
+            {
+                spheres[i].transform.Rotate(new Vector3(0, 0, rotateSpeed * 3 * Time.deltaTime * maxSizeSphere * (manager.instruments[i] / maxLife)));
+            }
+            else
+            {
+                spheres[i].transform.Rotate(new Vector3(0, 0, rotateSpeed * Time.deltaTime * maxSizeSphere * (manager.instruments[i] / maxLife)));
+
+            }
+
         }
     }
 }

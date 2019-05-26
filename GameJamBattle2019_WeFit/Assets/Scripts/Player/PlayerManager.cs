@@ -13,12 +13,16 @@ public class PlayerManager : MonoBehaviour
     public float maxSizeSphere;
     int damages;
 
+    public int score;
+
     private bool invincible;
     public List<bool> instrumentsMax;
 
     // Start is called before the first frame update
     void Start()
     {
+        score = 0;
+        StartCoroutine(CalculateScore());
         damages = (int)(maxLife / 2f);
         instrumentsMax = new List<bool>();
         for(int i = 0; i < instruments.Count; i++)
@@ -27,13 +31,23 @@ public class PlayerManager : MonoBehaviour
         }
         SwitchState();
     }
-
+    
     // Update is called once per frame
     void Update()
     {
         UpdateLife();
         /*if (Input.GetButton("Jump"))
             Delete(0);*/
+    }
+
+    int CalculateSCore()
+    {
+        int t = 0;
+        foreach (int i in instruments)
+        {
+            t += i;
+        }
+        return t;
     }
 
     void UpdateLife()
@@ -225,6 +239,25 @@ public class PlayerManager : MonoBehaviour
             }
         }
         return target;
+    }
+
+    IEnumerator CalculateScore()
+    {
+
+        yield return new WaitForSeconds(1);
+        int t = 0;
+        foreach (int i in instruments)
+        {
+            t += i;
+        }
+        foreach (bool b in instrumentsMax)
+        {
+            if (b)
+                t += 10;
+        }
+        score += t;
+
+        StartCoroutine(CalculateScore());
     }
 
     private IEnumerator InvincibleState()

@@ -14,6 +14,30 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="HitBallGood" ID="{490BB214-51B6-4EB9-A389-E5D523A0D446}">
+					<ChildrenList>
+						<Action Name="" ID="{5DF5F6A8-18E6-441F-B297-1469E1DBBEBC}" ShortID="609653606">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HitBallGood" ID="{365E7F56-26A4-4070-9B2B-6CD5EFC60698}" WorkUnitID="{FDB9B78E-FC9E-41FE-ABE1-E891252B45B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="HitBallBad" ID="{2309BBF5-A480-4F1E-B7C8-3DD8D6F67F5C}">
+					<ChildrenList>
+						<Action Name="" ID="{E9AF751B-4FC4-4E88-B105-8FFF4AA3BF74}" ShortID="606912910">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="HitBallBad" ID="{336A87C0-54A4-40A0-BD6D-7A6DF4F92271}" WorkUnitID="{FDB9B78E-FC9E-41FE-ABE1-E891252B45B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Start" ID="{B732EC5F-2167-4FA7-90E4-E9F86FF30BD0}"/>
+				<Event Name="UI_Quit" ID="{55B933C5-A331-493F-AC8E-AC9AC1748636}"/>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

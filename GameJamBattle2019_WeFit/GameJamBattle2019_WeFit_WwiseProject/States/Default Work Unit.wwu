@@ -21,7 +21,16 @@
 						<State Name="L1andL2andL4" ID="{2B39642C-F028-4C90-ADC1-BBFD845C15B8}"/>
 						<State Name="L2andL3andL4" ID="{6B265DDD-16DE-434D-B698-6813046876E2}"/>
 						<State Name="L1andL2andL3andL4" ID="{0136F13C-C77B-4C02-B392-7A7400346EAD}"/>
+						<State Name="L1andL3andL4" ID="{F0F5EAD2-2B51-4D77-B09D-701D5ACD952A}"/>
 					</ChildrenList>
+					<TransitionList>
+						<Transition>
+							<StartState Name="Drum_00" ID="{D37A6C83-B4EF-4865-B6D3-B91FFE76DF53}"/>
+							<EndState Name="L1andL2andL3andL4" ID="{0136F13C-C77B-4C02-B392-7A7400346EAD}"/>
+							<Time>1</Time>
+							<IsShared>false</IsShared>
+						</Transition>
+					</TransitionList>
 				</StateGroup>
 			</ChildrenList>
 		</WorkUnit>

@@ -1,7 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
-	1702304824	L1			\Default Work Unit\L1	
-	1702304826	L3			\Default Work Unit\L3	
-	1702304827	L2			\Default Work Unit\L2	
+	3298531235	Layers			\Default Work Unit\Layers	
 
 State Group	ID	Name			Wwise Object Path	Notes
 	3298531235	Layers			\Default Work Unit\Layers	
@@ -12,6 +10,7 @@ State	ID	Name	State Group			Notes
 	599649464	L1andL2andL4	Layers			
 	599649471	L1andL2andL3	Layers			
 	714328492	L2andL3andL4	Layers			
+	1332947527	L1andL3andL4	Layers			
 	1468994450	L1andL2andL3andL4	Layers			
 	1702304824	L1	Layers			
 	1702304826	L3	Layers			
@@ -23,9 +22,4 @@ State	ID	Name	State Group			Notes
 	3116499169	L2andL3	Layers			
 	3116499174	L2andL4	Layers			
 	3533580213	L3andL4	Layers			
-
-In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	133583335	Music_Layer3_Loop	C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\SFX\Music_Layer3_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Music_Layer3_Loop\Music_Layer3_Loop		9216064
-	470015135	Music_Layer2_Loop	C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\SFX\Music_Layer2_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Music_Layer2_Loop\Music_Layer2_Loop		9198936
-	1041687714	Music_Layer1_Loop	C:\Users\neha_\OneDrive\Desktop\GGJ2019\GameJamBattle2019V2\GameJamBattle2019\GameJamBattle2019_WeFit\GameJamBattle2019_WeFit_WwiseProject\.cache\Mac\SFX\Music_Layer1_Loop_D79FB2B7.wem		\Interactive Music Hierarchy\Default Work Unit\Layers\Music_Layer1_Loop\Music_Layer1_Loop		9198904
 

@@ -56,12 +56,44 @@ public class ObstacleManager : MonoBehaviour
             PatternData p = new PatternData(PatternHolder.example);
             StartCoroutine(PlayPattern(p));
         }
-        if (Input.GetKeyDown(KeyCode.W))
-        {
-            PatternData p = new PatternData(PatternHolder.example);
-            StartCoroutine(PlayPatternInverse(p));
-        }
     }
+
+    int CalculatePowerValue()
+    {
+        int r = Random.Range(1, 101);
+        List<bool> bools = player.GetComponent<PlayerManager>().instrumentsMax;
+        List<int> lives = player.GetComponent<PlayerManager>().instruments;
+
+        int[] spawns = new int[5] { 0, 0, 0, 0, 0 };
+        for(int i = 1; i <= lives.Count; i++)
+        {
+            if (bools[i-1])
+                spawns[0] += 15;
+            else
+                spawns[i] += 15;
+
+            spawns[0] += lives[i-1];
+            spawns[i] += (10 - lives[i-1]);
+        }
+
+        int total = 0;
+        for(int i = 0; i < spawns.Length; i++)
+        {
+            total += spawns[i];
+            if(r < total)
+            {
+                if(i == 0)
+                    Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
+                        + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
+                return i - 1;
+            }
+        }
+        Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
+            + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
+
+        return -1;
+    }
+
 
     void GenerateObstacles_SphericalSymmetric(int i)
     {
@@ -88,13 +120,13 @@ public class ObstacleManager : MonoBehaviour
                 break;
         }
     }
-
     void GenerateObstacle( int i)
     {
         Vector3 pos = tubeGroup.GetTube(i).transform.position;
         pos.z = GetSpawnDistance();
         GameObject g = Instantiate(powerUpPrefab, pos, new Quaternion());
         g.GetComponent<PowerScript>().speed = obstacleSpeed;
+        g.GetComponent<PowerScript>().instrumentNum = CalculatePowerValue();
     }
 
     bool RandomPowers;
@@ -105,34 +137,33 @@ public class ObstacleManager : MonoBehaviour
         RandomPowers = false;
         foreach (float f in pattern.patterns.Keys)
         {
-         while(patternTimer < f)
-            {
-                patternTimer += Time.deltaTime;
-                yield return new WaitForFixedUpdate();
-            }   
-         foreach(int i in pattern.patterns[f])
-            {
-                GenerateObstacle(i);
-            }
-        }
-        //   RandomPowers = true;
-    }
-    IEnumerator PlayPatternInverse(PatternData pattern)
-    {
-        patternTimer = 0f;
-        RandomPowers = false;
-        foreach (float f in pattern.patterns.Keys)
-        {
             while (patternTimer < f)
             {
                 patternTimer += Time.deltaTime;
                 yield return new WaitForFixedUpdate();
             }
-            foreach (int i in pattern.patterns[f])
+            switch (Random.Range(0, 3))
             {
-                GenerateObstacles_SphericalSymmetric(i);
+                case 0:
+                    foreach (int i in pattern.patterns[f])
+                    {
+                        GenerateObstacle(i);
+                    }
+                    break;
+                case 1:
+                    foreach (int i in pattern.patterns[f])
+                    {
+                        GenerateObstacles_SphericalSymmetric(i);
+                    }
+                    break;
+                case 2:
+                    foreach (int i in pattern.patterns[f])
+                    {
+                        GenerateObstacles_BilateralSymmetric(i);
+                    }
+                    break;
             }
         }
-        //   RandomPowers = true;
+          RandomPowers = true;
     }
 }

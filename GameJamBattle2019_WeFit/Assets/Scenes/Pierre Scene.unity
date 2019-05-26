@@ -444,6 +444,11 @@ PrefabInstance:
       propertyPath: playerSpeed
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 3884884960058743108, guid: 7ace17e098af31c42bd1eaa12562376a,
+        type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 1933253653}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7ace17e098af31c42bd1eaa12562376a, type: 3}
 --- !u!1001 &506103024
@@ -513,128 +518,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2645213547019068146, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547019068146, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547019068146, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547019068146, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547657749135, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547657749135, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547657749135, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547657749135, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546456424148, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546456424148, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546456424148, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546456424148, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546736048421, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546736048421, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546736048421, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546736048421, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547863782432, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547863782432, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547863782432, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213547863782432, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546276361702, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546276361702, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546276361702, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 2645213546276361702, guid: 97ef4d0b2d998d74b8cfc600139d9d0c,
-        type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 97ef4d0b2d998d74b8cfc600139d9d0c, type: 3}
+--- !u!1 &713060111 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3884884960058743105, guid: 7ace17e098af31c42bd1eaa12562376a,
+    type: 3}
+  m_PrefabInstance: {fileID: 467571350}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1049647294
 GameObject:
   m_ObjectHideFlags: 0
@@ -680,10 +571,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ab2382dbbf28d49a0e1670db48c529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 713060111}
   tubeGroup: {fileID: 1820473631}
   powerUpPrefab: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,
     type: 3}
-  speed: 10
+  obstacleSpeed: 5
 --- !u!1 &1237096529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,

@@ -10,6 +10,8 @@ public class PatternData
 {
 
     public SortedList<float, int[]> patterns;
+    public bool allowRandom;
+    public bool allowMirroeimages;
     
     public PatternData(SortedList<float, int[]> pairs)
     {

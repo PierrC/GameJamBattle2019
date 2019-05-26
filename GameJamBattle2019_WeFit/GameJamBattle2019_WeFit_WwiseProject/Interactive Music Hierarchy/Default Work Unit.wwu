@@ -1690,6 +1690,13 @@
 								<MusicTransition Name="Transition" ID="{81BF651F-DF97-441B-A12F-06E1278056A0}">
 									<TransitionInfo/>
 								</MusicTransition>
+								<MusicTransition Name="Transition" ID="{0A8AAD94-3D87-451F-B8B9-BEEC378739C3}">
+									<PropertyList>
+										<Property Name="DestinationJumpPositionPreset" Type="int16" Value="1"/>
+										<Property Name="ExitSourceAt" Type="int16" Value="3"/>
+									</PropertyList>
+									<TransitionInfo/>
+								</MusicTransition>
 							</ChildrenList>
 							<TransitionInfo/>
 						</MusicTransition>

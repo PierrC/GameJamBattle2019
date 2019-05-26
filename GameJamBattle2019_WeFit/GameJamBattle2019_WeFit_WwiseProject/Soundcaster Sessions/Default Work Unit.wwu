@@ -4,12 +4,6 @@
 		<WorkUnit Name="Default Work Unit" ID="{E5776DD0-55C6-47E3-8013-61EF03F36A21}" PersistMode="Standalone">
 			<ChildrenList>
 				<SoundcasterSession Name="layer test" ID="{2550391D-301F-4B99-8F5D-C22C1EEA266A}">
-					<ModuleList>
-						<Module>
-							<ObjectRef Name="Layers" ID="{ED898006-4733-4695-8758-685901437311}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}"/>
-							<Position X="0" Y="0"/>
-						</Module>
-					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
 						<CurrentStateRef Name="L1" ID="{5E4F96D9-0A4A-4014-9444-51A6155BF934}"/>

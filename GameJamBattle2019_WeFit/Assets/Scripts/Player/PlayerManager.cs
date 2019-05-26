@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        damages = (int)(maxLife / 2f);
         instrumentsMax = new List<bool>();
         for(int i = 0; i < instruments.Count; i++)
         {
@@ -161,23 +162,47 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    int damages;
     public void Delete()
     {
-        if(!invincible)
+        if (!invincible)
         {
-            int n_instrument = FindTarget();
-            if (instruments[n_instrument] > 0 )
-                instruments[n_instrument] -= 4;
-            if (instruments[n_instrument] < 0)
-                instruments[n_instrument] = 0;
-            if(instruments[n_instrument] <= 0)
-            {
-                instrumentsMax[n_instrument] = false;
-                SwitchState();
-            }
-            StartCoroutine(InvincibleState());
-        }
 
+            if (CheckLife())
+            {
+                int i = Random.Range(0, 4);
+                int counter = 0;
+                while (instruments[i] == 0)
+                {
+                    counter++;
+                    i = Random.Range(0, 4);
+                    if (counter >= 5)
+                        break;
+                }
+                if (counter < 5)
+                {
+                    instruments[i] -= damages;
+
+                }
+                if (instruments[i] <= 0)
+                {
+                    instruments[i] = 0;
+                    instrumentsMax[i] = false;
+                    SwitchState();
+                }
+                StartCoroutine(InvincibleState());
+            }
+        }
+    }
+
+    private bool CheckLife()
+    {
+        foreach (int i in instruments)
+        {
+            if (i != 0)
+                return true;
+        }
+        return false;
     }
 
     private int FindTarget()

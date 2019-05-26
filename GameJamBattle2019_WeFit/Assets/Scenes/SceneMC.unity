@@ -574,6 +574,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   actualTube: {fileID: 1904435988}
+  camera: {fileID: 0}
   playerSpeed: 10
 --- !u!135 &617774352
 SphereCollider:
@@ -690,10 +691,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 07ab2382dbbf28d49a0e1670db48c529, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 617774348}
   tubeGroup: {fileID: 1820473631}
   powerUpPrefab: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,
     type: 3}
-  speed: 10
+  obstacleSpeed: 20
 --- !u!1 &1237096529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,
@@ -714,6 +716,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 0
   instrumentNum: 0
+  materials: []
 --- !u!1 &1352599591
 GameObject:
   m_ObjectHideFlags: 0

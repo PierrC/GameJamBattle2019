@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public Animator animCamera;
+    public Animator animPlayer;
     public List<int> instruments;
     public List<GameObject> spheres;
     public int maxLife;
     public float maxSizeSphere;
+    int damages;
 
     private bool invincible;
     public List<bool> instrumentsMax;
@@ -43,6 +46,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Collect(int n_instrument)
     {
+        animPlayer.Play("hit", -1, 0f);
         if (instruments[n_instrument] < maxLife)
             instruments[n_instrument]++;
         if (instruments[n_instrument] == maxLife && !instrumentsMax[n_instrument])
@@ -162,7 +166,6 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-    int damages;
     public void Delete()
     {
         if (!invincible)
@@ -190,6 +193,8 @@ public class PlayerManager : MonoBehaviour
                     instrumentsMax[i] = false;
                     SwitchState();
                 }
+                // felix
+                animCamera.Play("ScreenShake", -1, 0f);
                 StartCoroutine(InvincibleState());
             }
         }
@@ -231,11 +236,15 @@ public class PlayerManager : MonoBehaviour
             {
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = false;
+                //felix
+                RenderSettings.fogDensity = 0.031f;
             }
             else
             {
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = true;
+                //felix
+                RenderSettings.fogDensity = 0.03f;
             }
             yield return null;
 
@@ -243,5 +252,7 @@ public class PlayerManager : MonoBehaviour
         foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
             mesh.enabled = true;
         invincible = false;
+        //felix
+        RenderSettings.fogDensity = 0.03f;
     }
 }

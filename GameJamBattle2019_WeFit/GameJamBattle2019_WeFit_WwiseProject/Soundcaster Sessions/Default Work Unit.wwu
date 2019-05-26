@@ -6,7 +6,7 @@
 				<SoundcasterSession Name="layer test" ID="{2550391D-301F-4B99-8F5D-C22C1EEA266A}">
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="L3" ID="{9E143CB6-92E9-4B6A-BABC-34645BE7B97B}"/>
+						<CurrentStateRef Name="Drum_00" ID="{D37A6C83-B4EF-4865-B6D3-B91FFE76DF53}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true"/>
 				</SoundcasterSession>

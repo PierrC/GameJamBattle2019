@@ -24,6 +24,71 @@
 				<Event Id="3298531235" Name="Layers" ObjectPath="\Events\Default Work Unit\Layers" DurationType="Infinite"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+<<<<<<< HEAD
+				<File Id="80310451" Language="SFX">
+					<ShortName>Layer2.wav</ShortName>
+					<Path>SFX\Layer2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="113232063" Language="SFX">
+					<ShortName>Layer1andLayer3.wav</ShortName>
+					<Path>SFX\Layer1andLayer3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="212060394" Language="SFX">
+					<ShortName>Layer2andLayer3.wav</ShortName>
+					<Path>SFX\Layer2andLayer3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="226717417" Language="SFX">
+					<ShortName>Layer1andLayer2andLayer4.wav</ShortName>
+					<Path>SFX\Layer1andLayer2andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="245091439" Language="SFX">
+					<ShortName>Layer1andLayer2.wav</ShortName>
+					<Path>SFX\Layer1andLayer2_D79FB2B7.wem</Path>
+				</File>
+				<File Id="310176905" Language="SFX">
+					<ShortName>Layer2andLayer3andLayer4.wav</ShortName>
+					<Path>SFX\Layer2andLayer3andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="340421797" Language="SFX">
+					<ShortName>Layer1.wav</ShortName>
+					<Path>SFX\Layer1_D79FB2B7.wem</Path>
+				</File>
+				<File Id="425770623" Language="SFX">
+					<ShortName>Layer1andLayer3andLayer4.wav</ShortName>
+					<Path>SFX\Layer1andLayer3andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="478079139" Language="SFX">
+					<ShortName>Layer4.wav</ShortName>
+					<Path>SFX\Layer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="528264789" Language="SFX">
+					<ShortName>Layer00_Drums.wav</ShortName>
+					<Path>SFX\Layer00_Drums_D79FB2B7.wem</Path>
+				</File>
+				<File Id="585101172" Language="SFX">
+					<ShortName>Layer1andLayer2andLayer3andLayer4.wav</ShortName>
+					<Path>SFX\Layer1andLayer2andLayer3andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="633135797" Language="SFX">
+					<ShortName>Layer1andLayer2andLayer3.wav</ShortName>
+					<Path>SFX\Layer1andLayer2andLayer3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="750048895" Language="SFX">
+					<ShortName>Layer3.wav</ShortName>
+					<Path>SFX\Layer3_D79FB2B7.wem</Path>
+				</File>
+				<File Id="900307280" Language="SFX">
+					<ShortName>Layer3andLayer4.wav</ShortName>
+					<Path>SFX\Layer3andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="994534677" Language="SFX">
+					<ShortName>Layer2andLayer4.wav</ShortName>
+					<Path>SFX\Layer2andLayer4_D79FB2B7.wem</Path>
+				</File>
+				<File Id="1058859039" Language="SFX">
+					<ShortName>Layer1andLayer4.wav</ShortName>
+					<Path>SFX\Layer1andLayer4_D79FB2B7.wem</Path>
+=======
 				<File Id="74210391" Language="SFX">
 					<ShortName>L2L3_4-4_120bpm.wav</ShortName>
 					<Path>SFX\L2L3_4-4_120bpm_D79FB2B7.wem</Path>
@@ -87,6 +152,7 @@
 				<File Id="1008059073" Language="SFX">
 					<ShortName>L3_4-4_120bpm_1.wav</ShortName>
 					<Path>SFX\L3_4-4_120bpm_1_D79FB2B7.wem</Path>
+>>>>>>> fa4704810fd5023d5e377fc5dae48deff3aeaeda
 				</File>
 			</IncludedMemoryFiles>
 		</SoundBank>

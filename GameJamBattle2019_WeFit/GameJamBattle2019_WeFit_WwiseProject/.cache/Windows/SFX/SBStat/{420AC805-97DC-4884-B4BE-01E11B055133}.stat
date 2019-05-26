@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <BankMemory>
+<<<<<<< HEAD
+	<Timestamp>1558883460</Timestamp>
+=======
 	<Timestamp>1558835185</Timestamp>
+>>>>>>> fa4704810fd5023d5e377fc5dae48deff3aeaeda
 	<DataSize>98305024</DataSize>
 	<FileSize>98312490</FileSize>
 	<DecodedSize>98305024</DecodedSize>

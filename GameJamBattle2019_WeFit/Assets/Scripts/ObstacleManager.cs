@@ -53,7 +53,7 @@ public class ObstacleManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            PatternData p = new PatternData(PatternHolder.example);
+            PatternData p = new PatternData(PatternHolder.VeryHard);
             StartCoroutine(PlayPattern(p));
         }
     }
@@ -73,7 +73,7 @@ public class ObstacleManager : MonoBehaviour
                 spawns[i] += 15;
 
             spawns[0] += lives[i-1];
-            spawns[i] += (10 - lives[i-1]);
+            spawns[i] += (player.GetComponent<PlayerManager>().maxLife - lives[i-1])/ player.GetComponent<PlayerManager>().maxLife * 10;
         }
 
         int total = 0;
@@ -82,14 +82,9 @@ public class ObstacleManager : MonoBehaviour
             total += spawns[i];
             if(r < total)
             {
-                if(i == 0)
-                    Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
-                        + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
                 return i - 1;
             }
         }
-        Debug.Log("spawns[0]:" + spawns[0] + " spawns[1]:" + spawns[1] + " spawns[2]:" + spawns[2]
-            + " spawns[3]:" + spawns[3] + " spawns[4]:" + spawns[4]);
 
         return -1;
     }
@@ -97,10 +92,22 @@ public class ObstacleManager : MonoBehaviour
 
     void GenerateObstacles_SphericalSymmetric(int i)
     {
+        if (i == -1)
+            i = Random.Range(0, 3);
+        if (i == -2)
+            i = Random.Range(4, 6);
+        if (i == -3)
+            i = Random.Range(0, 6);
         GenerateObstacle(5 - i);
     }
     void GenerateObstacles_BilateralSymmetric(int i)
     {
+        if (i == -1)
+            i = Random.Range(0, 3);
+        if (i == -2)
+            i = Random.Range(4, 6);
+        if (i == -3)
+            i = Random.Range(0, 6);
         switch (i)
         {
             case 0:
@@ -122,6 +129,13 @@ public class ObstacleManager : MonoBehaviour
     }
     void GenerateObstacle( int i)
     {
+        if (i == -1)
+            i = Random.Range(0, 3);
+        if(i == -2)
+            i = Random.Range(4, 6);
+        if (i == -3)
+            i = Random.Range(0, 6);
+
         Vector3 pos = tubeGroup.GetTube(i).transform.position;
         pos.z = GetSpawnDistance();
         GameObject g = Instantiate(powerUpPrefab, pos, new Quaternion());
@@ -137,7 +151,7 @@ public class ObstacleManager : MonoBehaviour
         RandomPowers = false;
         foreach (float f in pattern.patterns.Keys)
         {
-            while (patternTimer < f)
+            while (patternTimer < f*2)
             {
                 patternTimer += Time.deltaTime;
                 yield return new WaitForFixedUpdate();
@@ -153,13 +167,15 @@ public class ObstacleManager : MonoBehaviour
                 case 1:
                     foreach (int i in pattern.patterns[f])
                     {
-                        GenerateObstacles_SphericalSymmetric(i);
+                        GenerateObstacle(i);
+                      //  GenerateObstacles_SphericalSymmetric(i);
                     }
                     break;
                 case 2:
                     foreach (int i in pattern.patterns[f])
                     {
-                        GenerateObstacles_BilateralSymmetric(i);
+                        GenerateObstacle(i);
+                     //   GenerateObstacles_BilateralSymmetric(i);
                     }
                     break;
             }

@@ -6,6 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
     public Animator animCamera;
     public Animator animPlayer;
+
     public List<int> instruments;
     public List<GameObject> spheres;
     public int maxLife;
@@ -46,6 +47,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Collect(int n_instrument)
     {
+
         animPlayer.Play("hit", -1, 0f);
         if (instruments[n_instrument] < maxLife)
             instruments[n_instrument]++;

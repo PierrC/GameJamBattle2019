@@ -82,6 +82,58 @@
 						<ActiveSource Name="HitBall_Bad" ID="{30650B30-28F7-4906-940A-7A1AF2996D44}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
+				<Sound Name="UI_Quit_Mix" ID="{BAF89451-EDF6-4786-96FC-54C6B772C76C}" ShortID="1043765311">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9345639F-A36B-40A9-8A8E-88F470535AA0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DC8A117F-43BD-4F98-AC40-2A131813AB3E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Quit_Mix" ID="{4C338D5C-1372-4421-8BD9-6D8E62EC47A3}" ShortID="961302918">
+							<Language>SFX</Language>
+							<AudioFile>UI_Quit_Mix.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Quit_Mix" ID="{4C338D5C-1372-4421-8BD9-6D8E62EC47A3}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="UI_Start_Mix" ID="{735F3AE5-9D36-4CE8-831E-CB26B6753A07}" ShortID="558231006">
+					<PropertyList>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>1</Value>
+							</ValueList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9345639F-A36B-40A9-8A8E-88F470535AA0}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{DC8A117F-43BD-4F98-AC40-2A131813AB3E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="UI_Start_Mix" ID="{6450C3F8-7D12-49AE-97D4-447065DE4128}" ShortID="242489288">
+							<Language>SFX</Language>
+							<AudioFile>UI_Start_Mix.wav</AudioFile>
+						</AudioFileSource>
+					</ChildrenList>
+					<ActiveSourceList>
+						<ActiveSource Name="UI_Start_Mix" ID="{6450C3F8-7D12-49AE-97D4-447065DE4128}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

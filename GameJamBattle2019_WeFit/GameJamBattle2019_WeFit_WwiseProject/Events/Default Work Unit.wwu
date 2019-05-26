@@ -36,8 +36,28 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="UI_Start" ID="{B732EC5F-2167-4FA7-90E4-E9F86FF30BD0}"/>
-				<Event Name="UI_Quit" ID="{55B933C5-A331-493F-AC8E-AC9AC1748636}"/>
+				<Event Name="UI_Start" ID="{B732EC5F-2167-4FA7-90E4-E9F86FF30BD0}">
+					<ChildrenList>
+						<Action Name="" ID="{0AB7CFC4-0BDE-4E83-8308-001DDD200422}" ShortID="647162358">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Start_Mix" ID="{735F3AE5-9D36-4CE8-831E-CB26B6753A07}" WorkUnitID="{FDB9B78E-FC9E-41FE-ABE1-E891252B45B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="UI_Quit" ID="{55B933C5-A331-493F-AC8E-AC9AC1748636}">
+					<ChildrenList>
+						<Action Name="" ID="{75A13D68-0B6A-4950-811D-4E1F0C0D4CAA}" ShortID="664685689">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="UI_Quit_Mix" ID="{BAF89451-EDF6-4786-96FC-54C6B772C76C}" WorkUnitID="{FDB9B78E-FC9E-41FE-ABE1-E891252B45B8}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>

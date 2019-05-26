@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    public Animator animCamera;
+    public Animator animPlayer;
     public List<int> instruments;
     public List<GameObject> spheres;
     public int maxLife;
     public float maxSizeSphere;
-    public Animator anim;
 
     private bool invincible;
     public List<bool> instrumentsMax;
@@ -43,6 +44,11 @@ public class PlayerManager : MonoBehaviour
     public void Collect(int n_instrument)
     {
         if (instruments[n_instrument] < maxLife)
+
+            // felix
+            animPlayer.Play("hit", -1, 0f);
+            //Debug.Log("stuff happen");
+
             instruments[n_instrument]++;
         if (instruments[n_instrument] == maxLife && !instrumentsMax[n_instrument])
         {
@@ -176,8 +182,7 @@ public class PlayerManager : MonoBehaviour
                 SwitchState();
             }
             // felix
-            Debug.Log("ScrenShake");
-            anim.Play("ScreenShake", -1, 0f);
+            animCamera.Play("ScreenShake", -1, 0f);
 
             StartCoroutine(InvincibleState());
         }
@@ -211,11 +216,17 @@ public class PlayerManager : MonoBehaviour
             timer += Time.deltaTime;
             if(Mathf.PingPong(Time.time * 10, 2)>1)
             {
+                //felix
+                RenderSettings.fogDensity = 0.031f;
+
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = false;
             }
             else
             {
+                //felix
+                RenderSettings.fogDensity = 0.03f;
+
                 foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
                     mesh.enabled = true;
             }
@@ -225,5 +236,8 @@ public class PlayerManager : MonoBehaviour
         foreach (MeshRenderer mesh in this.GetComponentsInChildren<MeshRenderer>())
             mesh.enabled = true;
         invincible = false;
+
+        //felix
+        RenderSettings.fogDensity = 0.03f;
     }
 }

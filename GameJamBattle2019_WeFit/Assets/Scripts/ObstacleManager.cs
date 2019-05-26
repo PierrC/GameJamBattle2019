@@ -10,35 +10,58 @@ public class ObstacleManager : MonoBehaviour
 
     public float obstacleSpeed;
 
+    public Timer Timer;
     // Start is called before the first frame update
     void Start()
     {
-        b = false;
+        downTimeTimer = 0f;
+        start = true;
         RandomPowers = true;
     }
 
+    bool start;
     // Update is called once per frame
     void Update()
     {
+        if (RandomPowers)
+        {
+            AutomaticInstantiation();
+        }
         ManualInstantiation();
 
     }
 
+    int waitingTime;
+
     private void FixedUpdate()
     {
         obstacleSpeed += 0.1f * Time.fixedDeltaTime;
-        AutomaticInstantiation();
     }
 
-    float timer = 1;
-    bool b;
+    float RandomPowerTimer = 1;
+    bool harderRand;
     void AutomaticInstantiation()
     {
-        timer -= Time.fixedDeltaTime;
-        if (timer < 0 && RandomPowers)
+        RandomPowerTimer -= Time.fixedDeltaTime;
+
+        if (!harderRand)
         {
-            GenerateObstacle(Random.Range(0, 6));
-            timer = 1.0f;
+            if (RandomPowerTimer < 0 && RandomPowers)
+            {
+                GenerateObstacle(Random.Range(0, 6));
+                RandomPowerTimer = 1.0f;
+            }
+        }
+        else
+        {
+            int i1 = Random.Range(0, 6);
+            int i2 = Random.Range(0, 6);
+            while (i2 == i1)
+                i2 = Random.Range(0, 6);
+
+            GenerateObstacle(i1);
+            GenerateObstacle(i2);
+            RandomPowerTimer = 1.0f;
         }
     }
 
@@ -50,11 +73,9 @@ public class ObstacleManager : MonoBehaviour
 
     void ManualInstantiation()
     {
-
         if (Input.GetKeyDown(KeyCode.Q))
         {
-            PatternData p = new PatternData(PatternHolder.VeryHard);
-            StartCoroutine(PlayPattern(p));
+            StartCoroutine(PlayPattern(new PatternData(PatternHolder.easy1)));
         }
     }
 
@@ -65,30 +86,28 @@ public class ObstacleManager : MonoBehaviour
         List<int> lives = player.GetComponent<PlayerManager>().instruments;
 
         int[] spawns = new int[5] { 0, 0, 0, 0, 0 };
-        for(int i = 1; i <= lives.Count; i++)
+        for (int i = 1; i <= lives.Count; i++)
         {
-            if (bools[i-1])
+            if (bools[i - 1])
                 spawns[0] += 15;
             else
                 spawns[i] += 15;
 
-            spawns[0] += lives[i-1];
-            spawns[i] += (player.GetComponent<PlayerManager>().maxLife - lives[i-1])/ player.GetComponent<PlayerManager>().maxLife * 10;
+            spawns[0] += lives[i - 1];
+            spawns[i] += (player.GetComponent<PlayerManager>().maxLife - lives[i - 1]) / player.GetComponent<PlayerManager>().maxLife * 10;
         }
 
         int total = 0;
-        for(int i = 0; i < spawns.Length; i++)
+        for (int i = 0; i < spawns.Length; i++)
         {
             total += spawns[i];
-            if(r < total)
+            if (r < total)
             {
                 return i - 1;
             }
         }
-
         return -1;
     }
-
 
     void GenerateObstacles_SphericalSymmetric(int i)
     {
@@ -127,11 +146,11 @@ public class ObstacleManager : MonoBehaviour
                 break;
         }
     }
-    void GenerateObstacle( int i)
+    void GenerateObstacle(int i)
     {
         if (i == -1)
             i = Random.Range(0, 3);
-        if(i == -2)
+        if (i == -2)
             i = Random.Range(4, 6);
         if (i == -3)
             i = Random.Range(0, 6);
@@ -145,41 +164,84 @@ public class ObstacleManager : MonoBehaviour
 
     bool RandomPowers;
     float patternTimer;
-    IEnumerator PlayPattern(PatternData pattern)
+    float downTimeTimer;
+    IEnumerator StartPattern(PatternData pattern)
     {
-        patternTimer = 0f;
-        RandomPowers = false;
+        yield return new WaitForSecondsRealtime(1);
         foreach (float f in pattern.patterns.Keys)
         {
-            while (patternTimer < f*2)
+            while (patternTimer < f * 2)
             {
                 patternTimer += Time.deltaTime;
                 yield return new WaitForFixedUpdate();
             }
-            switch (Random.Range(0, 3))
+
+            foreach (int i in pattern.patterns[f]) { GenerateObstacle(i); }
+
+        }
+
+
+        StartCoroutine(WaitPattern());
+    }
+
+
+    IEnumerator PlayPattern(PatternData pattern)
+    {
+        patternTimer = 0f;
+        RandomPowers = pattern.allowRandomPower;
+        foreach (float f in pattern.patterns.Keys)
+        {
+            while (patternTimer < f * 2)
             {
-                case 0:
-                    foreach (int i in pattern.patterns[f])
-                    {
-                        GenerateObstacle(i);
-                    }
-                    break;
-                case 1:
-                    foreach (int i in pattern.patterns[f])
-                    {
-                        GenerateObstacle(i);
-                      //  GenerateObstacles_SphericalSymmetric(i);
-                    }
-                    break;
-                case 2:
-                    foreach (int i in pattern.patterns[f])
-                    {
-                        GenerateObstacle(i);
-                     //   GenerateObstacles_BilateralSymmetric(i);
-                    }
-                    break;
+                patternTimer += Time.deltaTime;
+                yield return new WaitForFixedUpdate();
+            }
+            if (pattern.allowMirrorimages)
+            {
+                switch (Random.Range(0, 3))
+                {
+                    case 0:
+                        foreach (int i in pattern.patterns[f]) { GenerateObstacle(i); }
+                        break;
+                    case 1:
+                        foreach (int i in pattern.patterns[f]) { GenerateObstacles_SphericalSymmetric(i); }
+                        break;
+                    case 2:
+                        foreach (int i in pattern.patterns[f]) { GenerateObstacles_BilateralSymmetric(i); }
+                        break;
+                }
+            }
+            else
+            {
+                foreach (int i in pattern.patterns[f]) { GenerateObstacle(i); }
             }
         }
-          RandomPowers = true;
+        RandomPowers = true;
+        StartCoroutine(WaitPattern());
     }
+
+    IEnumerator WaitPattern()
+    {
+
+        yield return new WaitForSeconds(Random.Range(5, 16));
+        if(Timer.actualTime < 2 * Timer.totalTime / 5)
+        {
+            StartCoroutine(PlayPattern(
+                PatternHolder.easyPatterns[Random.Range(0, PatternHolder.easyPatterns.Length)]));
+
+        }
+        else if(Timer.actualTime < 4 * Timer.totalTime / 5)
+        {
+            StartCoroutine(PlayPattern(
+                PatternHolder.mediumPatterns[Random.Range(0, PatternHolder.mediumPatterns.Length)]));
+        }
+        else
+        {
+            StartCoroutine(PlayPattern(
+                PatternHolder.hardPatterns[Random.Range(0, PatternHolder.hardPatterns.Length)]));
+        }
+
+        
+    }
+
 }

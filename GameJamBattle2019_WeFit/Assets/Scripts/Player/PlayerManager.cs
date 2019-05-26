@@ -20,6 +20,7 @@ public class PlayerManager : MonoBehaviour
         {
             instrumentsMax.Add(false);
         }
+        SwitchState();
     }
 
     // Update is called once per frame

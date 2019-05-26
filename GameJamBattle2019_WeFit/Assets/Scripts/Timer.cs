@@ -8,7 +8,7 @@ public class Timer : MonoBehaviour
 {
     public float totalTime;
     public Image image;
-    private float actualTime;
+    public float actualTime;
 
     // Start is called before the first frame update
     void Start()

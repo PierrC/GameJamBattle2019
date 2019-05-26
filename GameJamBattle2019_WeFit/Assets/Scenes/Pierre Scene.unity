@@ -449,7 +449,8 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 1933253653}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1890130736, guid: 7ace17e098af31c42bd1eaa12562376a, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7ace17e098af31c42bd1eaa12562376a, type: 3}
 --- !u!1001 &506103024
 PrefabInstance:
@@ -575,7 +576,7 @@ MonoBehaviour:
   tubeGroup: {fileID: 1820473631}
   powerUpPrefab: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,
     type: 3}
-  obstacleSpeed: 5
+  obstacleSpeed: 20
 --- !u!1 &1237096529 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3973534926897798581, guid: 3ef8fc93535354c49a5e9b31f977bec0,

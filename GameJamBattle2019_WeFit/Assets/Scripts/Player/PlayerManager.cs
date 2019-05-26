@@ -10,7 +10,7 @@ public class PlayerManager : MonoBehaviour
     public float maxSizeSphere;
 
     private bool invincible;
-    private List<bool> instrumentsMax;
+    public List<bool> instrumentsMax;
 
     // Start is called before the first frame update
     void Start()

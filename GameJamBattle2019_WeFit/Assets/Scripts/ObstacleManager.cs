@@ -230,7 +230,7 @@ public class ObstacleManager : MonoBehaviour
     IEnumerator WaitPattern()
     {
 
-        yield return new WaitForSeconds(Random.Range(5, 11));
+        yield return new WaitForSeconds(Random.Range(3, 8));
         if(Timer.actualTime < 2 * Timer.totalTime / 5)
         {
             StartCoroutine(PlayPattern(

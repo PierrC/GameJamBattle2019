@@ -46,5 +46,6 @@ public class PowerScript : MonoBehaviour
                 other.gameObject.GetComponent<PlayerManager>().Collect(instrumentNum);
 
         }
+        GameObject.Destroy(gameObject);
     }
 }

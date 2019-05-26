@@ -1483,9 +1483,6 @@
 							</TransitionList>
 							<Playlist>
 								<MusicPlaylistItem Name="" ID="{32B3F4F0-DF9D-4139-8A66-C760172323D7}" ShortID="285477001">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
 									<ChildrenList>
 										<MusicPlaylistItem Name="" ID="{EABE2638-544B-4395-931E-54E2A5A267C1}" ShortID="463630533">
 											<PropertyList>
@@ -1581,19 +1578,7 @@
 								</MusicTransition>
 							</TransitionList>
 							<Playlist>
-								<MusicPlaylistItem Name="" ID="{66036CB9-E035-4856-B497-A3866698C02E}" ShortID="823800882">
-									<PropertyList>
-										<Property Name="LoopCount" Type="int16" Value="0"/>
-									</PropertyList>
-									<ChildrenList>
-										<MusicPlaylistItem Name="" ID="{B65D2996-000E-4F08-8C04-FE418F84F139}" ShortID="638604095">
-											<PropertyList>
-												<Property Name="PlaylistItemType" Type="int16" Value="1"/>
-											</PropertyList>
-											<SegmentRef Name="L4_4-4_120bpm_2" ID="{8DCB6353-0CCB-4C15-BB0E-F5656E7F58F2}"/>
-										</MusicPlaylistItem>
-									</ChildrenList>
-								</MusicPlaylistItem>
+								<MusicPlaylistItem Name="" ID="{66036CB9-E035-4856-B497-A3866698C02E}" ShortID="823800882"/>
 							</Playlist>
 						</MusicPlaylistContainer>
 					</ChildrenList>
@@ -1689,34 +1674,18 @@
 					<EntryList>
 						<Entry>
 							<Path>
-								<PathElementRef Name="L1" ID="{5E4F96D9-0A4A-4014-9444-51A6155BF934}"/>
-							</Path>
-							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="L2" ID="{61491EB8-EC4D-4065-8A69-9A8EA8B143F0}"/>
-							</Path>
-							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
-								<PathElementRef Name="L3" ID="{9E143CB6-92E9-4B6A-BABC-34645BE7B97B}"/>
-							</Path>
-							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
-							</AudioNodeInfo>
-						</Entry>
-						<Entry>
-							<Path>
 								<PathElementRef Name="Drum_00" ID="{D37A6C83-B4EF-4865-B6D3-B91FFE76DF53}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="Drum_00_4-4_120bpm" ID="{CD9E4B57-E678-4A27-83EC-A89F0C02EAAA}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="L1" ID="{5E4F96D9-0A4A-4014-9444-51A6155BF934}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="L1_4-4_120bpm" ID="{CB8DAB79-096B-49C1-B74F-2FA3134E2A2F}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1724,7 +1693,7 @@
 								<PathElementRef Name="L1andL2" ID="{2EF2ED11-375A-4265-BAE5-50A6F6EB0C76}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L2_4-4_120bpm" ID="{7C5AD7DE-0114-41F8-B007-DDC579F5CD58}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1732,7 +1701,7 @@
 								<PathElementRef Name="L1andL2andL3" ID="{C649C73A-9C4B-4EF0-B887-937F8C01AC94}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L2L3_4-4_120bpm_1" ID="{DF746149-4A5C-449F-9625-26E555785B21}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1740,7 +1709,7 @@
 								<PathElementRef Name="L1andL2andL3andL4" ID="{0136F13C-C77B-4C02-B392-7A7400346EAD}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L2L3L4_4-4_120bpm" ID="{004DEA25-111D-4BCC-9E6A-E20CF66AB48B}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1748,7 +1717,7 @@
 								<PathElementRef Name="L1andL2andL4" ID="{2B39642C-F028-4C90-ADC1-BBFD845C15B8}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L2L4_4-4_120bpm_2" ID="{01CF0DF6-73A5-47A9-8FEE-5241256C7D9F}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1756,7 +1725,7 @@
 								<PathElementRef Name="L1andL3" ID="{E9C53895-364F-402B-B3B4-617EAB0A48C7}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L3_4-4_120bpm" ID="{286C6A68-6920-4E78-86BB-C03E48CDB560}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1764,7 +1733,7 @@
 								<PathElementRef Name="L1andL3andL4" ID="{F0F5EAD2-2B51-4D77-B09D-701D5ACD952A}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L3L4_4-4_120bpm" ID="{BC1AD96A-46BC-4E3A-8D92-B42743EDD724}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1772,7 +1741,15 @@
 								<PathElementRef Name="L1andL4" ID="{A56D3B94-2603-4F0F-8FFB-6314A3EAD7C0}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L1L4_4-4_120bpm" ID="{1C75CE3B-D8D9-487E-BA3B-145507230F49}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="L2" ID="{61491EB8-EC4D-4065-8A69-9A8EA8B143F0}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="L2_4-4_120bpm" ID="{6CE96300-F8B0-4488-B962-29556A32ACED}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1780,7 +1757,7 @@
 								<PathElementRef Name="L2andL3" ID="{320DA23F-2AA0-4671-85DB-54D985E7DFFD}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L2L3_4-4_120bpm" ID="{6BD72FAD-0886-4BFE-BB2C-4949FF4467B9}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1788,7 +1765,7 @@
 								<PathElementRef Name="L2andL3andL4" ID="{6B265DDD-16DE-434D-B698-6813046876E2}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L2L3L4_4-4_120bpm" ID="{B7E00074-BA07-4285-968F-D87E84FA1E30}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1796,7 +1773,15 @@
 								<PathElementRef Name="L2andL4" ID="{DA6F8C04-FD83-4231-B3E7-55442CE158E0}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L2L4L4_4-4_120bpm" ID="{2BFD7243-416E-43C8-9E6C-67E11B90F31F}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
+							</AudioNodeInfo>
+						</Entry>
+						<Entry>
+							<Path>
+								<PathElementRef Name="L3" ID="{9E143CB6-92E9-4B6A-BABC-34645BE7B97B}"/>
+							</Path>
+							<AudioNodeInfo>
+								<AudioNodeRef Name="L3_4-4_120bpm_1" ID="{A2CD64F7-0449-4AB2-92B5-37E25FCBE049}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1804,7 +1789,7 @@
 								<PathElementRef Name="L3andL4" ID="{411FF89C-F313-4930-AB5C-D5692B1411E9}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L3L4_4-4_120bpm" ID="{538E859C-0FCA-41E7-914E-3B6C656DBA56}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 						<Entry>
@@ -1812,7 +1797,7 @@
 								<PathElementRef Name="L4" ID="{D3B4ABCA-7B9E-4E47-8C02-AA6847CA7051}"/>
 							</Path>
 							<AudioNodeInfo>
-								<NoObject Platform="Linked"/>
+								<AudioNodeRef Name="L4_4-4_120bpm_2" ID="{010088A8-4757-440B-B46F-A4B1AF43C5B3}" WorkUnitID="{14257359-6B09-4871-BE68-A098252E6764}" Platform="Linked"/>
 							</AudioNodeInfo>
 						</Entry>
 					</EntryList>

@@ -4,6 +4,9 @@
 		<WorkUnit Name="Default Work Unit" ID="{14257359-6B09-4871-BE68-A098252E6764}" PersistMode="Standalone">
 			<ChildrenList>
 				<MusicSwitchContainer Name="Layers" ID="{ED898006-4733-4695-8758-685901437311}" ShortID="39192978">
+					<PropertyList>
+						<Property Name="ContinuePlay" Type="bool" Value="False"/>
+					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{9345639F-A36B-40A9-8A8E-88F470535AA0}"/>
@@ -1607,7 +1610,7 @@
 					</ChildrenList>
 					<StateInfo>
 						<StateGroupList>
-							<StateGroupInfo MusicSyncType="3">
+							<StateGroupInfo>
 								<StateGroupRef Name="Layers" ID="{7DAA340A-2A8A-4484-A99E-2F5D19309C8F}"/>
 							</StateGroupInfo>
 						</StateGroupList>
